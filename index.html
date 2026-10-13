@@ -224,6 +224,131 @@ td.cond{color:var(--muted);font-size:.93rem}
 .lineage p{margin:6px 0 0}
 .stg-src{margin-top:28px;font-size:.92rem;color:var(--muted);max-width:90ch}
 .stg-src a{word-break:break-word}
+/* Sobre el espacio */
+.meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.meta-grid>div{padding:16px 18px;border-left:1px solid var(--line)}
+.meta-grid>div:first-child{border-left:0}
+.meta-grid dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meta-grid dd{margin:4px 0 0;font-family:var(--display);font-size:1.2rem;font-weight:700;line-height:1.25}
+@media (max-width:700px){.meta-grid{grid-template-columns:1fr}.meta-grid>div{border-left:0;border-top:1px solid var(--line)}.meta-grid>div:first-child{border-top:0}}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:32px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.two h3{font-size:1.3rem;margin-bottom:10px}
+.two ul{margin:0;padding-left:20px}.two li+li{margin-top:6px}
+.route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:36px;counter-reset:r}
+@media (max-width:860px){.route{grid-template-columns:1fr 1fr;gap:14px}}
+@media (max-width:460px){.route{grid-template-columns:1fr}}
+.route a{display:flex;flex-direction:column;gap:6px;padding:18px;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);position:relative}
+@media (min-width:861px){.route a{border-left-width:0}.route a:first-child{border-left-width:1px;border-radius:10px 0 0 10px}.route a:last-child{border-radius:0 10px 10px 0}}
+@media (max-width:860px){.route a{border-radius:10px}}
+.route a:hover{background:var(--blue-soft)}
+.route .step{font-family:var(--mono);font-size:.75rem;color:var(--red);letter-spacing:.08em;text-transform:uppercase}
+.route b{font-family:var(--display);font-size:1.3rem}
+.route span.r{font-size:.93rem;color:var(--muted)}
+.route .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.route .tags i{font-style:normal;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--grey-soft)}
+
+/* Simuladores */
+.lab{margin-top:32px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:clamp(16px,3vw,28px)}
+.lab+.lab{margin-top:28px}
+.lab h3{font-size:1.5rem}
+.lab .how-to{color:var(--muted);margin-top:6px;max-width:72ch}
+.map-wrap{margin-top:18px;overflow-x:auto}
+.map-wrap svg{display:block;width:100%;min-width:520px;height:auto}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.steps button{font:inherit;font-family:var(--mono);font-size:.8rem;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.steps button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sim-range{width:100%;margin-top:16px;accent-color:var(--red)}
+.sim-out{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:20px;margin-top:16px;align-items:start}
+@media (max-width:600px){.sim-out{grid-template-columns:1fr;gap:6px}}
+.sim-out .yr{font-family:var(--display);font-size:2rem;font-weight:800;color:var(--red);line-height:1}
+.sim-out h4{font-family:var(--display);font-size:1.25rem;margin:0}
+.sim-out p{margin:6px 0 0}
+.keys{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:.88rem;color:var(--muted)}
+.keys span{display:inline-flex;align-items:center;gap:6px}
+.keys i{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.note-sm{font-size:.85rem;color:var(--muted);margin-top:10px;font-style:italic}
+/* colores de soberanía */
+.z-ind{fill:var(--green-soft);stroke:var(--green)}.k-ind{background:var(--green-soft)}
+.z-esp{fill:var(--gold-soft);stroke:var(--gold)}.k-esp{background:var(--gold-soft)}
+.z-fra{fill:var(--violet-soft);stroke:var(--violet)}.k-fra{background:var(--violet-soft)}
+.z-hai{fill:var(--grey-soft);stroke:var(--muted)}.k-hai{background:var(--grey-soft)}
+.z-rd{fill:var(--red-soft);stroke:var(--red)}.k-rd{background:var(--red-soft)}
+.z-he{fill:var(--blue-soft);stroke:var(--blue)}.k-he{background:var(--blue-soft)}
+.zone{stroke-width:1.2;transition:fill .4s}
+@media (prefers-reduced-motion:reduce){.zone{transition:none}}
+.svg-sea{fill:var(--bg)}
+.svg-txt{fill:var(--ink);font-family:var(--body);font-size:12px}
+.svg-txt.b{font-weight:700;font-size:13px}
+.svg-txt.m{fill:var(--muted);font-size:11px}
+.svg-dot{fill:var(--ink)}
+.border-ref{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-dasharray:4 4}
+.hatch-line{stroke:var(--violet);stroke-width:1.2}
+/* Santiago esquema */
+.river{fill:none;stroke:var(--blue);stroke-width:16;stroke-linecap:round;opacity:.55}
+.city{fill:var(--grey-soft);stroke:var(--line)}
+.blk{fill:var(--surface);stroke:var(--line)}
+.fort{fill:var(--gold-soft);stroke:var(--gold);stroke-width:2}
+.pos{fill:var(--surface);stroke:var(--red);stroke-width:2}
+.pos.on{fill:var(--red)}
+.fire{fill:var(--red);opacity:0;transition:opacity .4s}
+.fire.on{opacity:.28}
+.arrow{fill:none;stroke:var(--ink);stroke-width:2.2;marker-end:url(#ah);opacity:.15;transition:opacity .3s}
+.arrow.on{opacity:1}
+.arrow.esp{stroke:var(--gold)}
+.dim{opacity:.25;transition:opacity .3s}.dim.on{opacity:1}
+text.dim{opacity:0}text.dim.on{opacity:1}
+
+/* Videos y software */
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+@media (max-width:900px){.vgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.vgrid{grid-template-columns:1fr}}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.vthumb{aspect-ratio:16/9;max-width:100%;background:var(--ink);color:var(--bg);display:flex;flex-direction:column;justify-content:space-between;padding:14px 16px;text-decoration:none;position:relative}
+.vthumb .ep{font-family:var(--mono);font-size:.75rem;opacity:.75}
+.vthumb .play{align-self:center;width:54px;height:54px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.vthumb .play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vthumb .src{font-size:.82rem;opacity:.8}
+.vframe{aspect-ratio:16/9;width:100%;border:0;display:block}
+.vbody{padding:16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vbody h4{font-family:var(--display);font-size:1.15rem;margin:0;line-height:1.25}
+.vbody p{margin:0;font-size:.95rem;color:var(--muted)}
+.vbody ol{margin:4px 0 0;padding-left:20px;font-size:.95rem}
+.vbody .lbl{font-weight:700;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.sw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:28px;border-top:1px solid var(--line)}
+@media (max-width:700px){.sw{grid-template-columns:1fr}}
+.sw>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
+@media (min-width:701px){.sw>div:nth-child(odd){padding-right:24px}.sw>div:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}}
+.sw .ty{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;white-space:nowrap}
+.sw .ty.in{background:var(--red-soft);color:var(--red)}.sw .ty.ex{background:var(--blue-soft);color:var(--blue)}
+.sw b{font-family:var(--display);font-size:1.1rem}
+.sw p{margin:2px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* Evaluación */
+.quiz{margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.q legend{font-weight:700;font-size:1.05rem;padding:0;line-height:1.4}
+.q legend .qn{font-family:var(--mono);font-size:.8rem;color:var(--red);margin-right:8px}
+.q fieldset{border:0;margin:0;padding:0;min-width:0}
+.opts{display:grid;gap:8px;margin-top:12px}
+.opts label{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer;background:var(--bg)}
+.opts label:hover{border-color:var(--blue)}
+.opts input{margin-top:4px;accent-color:var(--blue)}
+.opts label.ok{border-color:var(--green);background:var(--green-soft)}
+.opts label.bad{border-color:var(--red);background:var(--red-soft)}
+.fb{margin-top:10px;font-size:.95rem}
+.fb b{color:var(--green)}.fb.no b{color:var(--red)}
+.score{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:20px;padding:18px 20px;border-radius:10px;background:var(--ink);color:var(--bg)}
+.score .num{font-family:var(--display);font-size:2.2rem;font-weight:800}
+.score .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.score .btn.ghost{background:transparent;color:var(--bg);border-color:var(--bg)}
+.rubric{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.rubric table{min-width:760px}
+.rubric td:first-child{font-weight:700;width:18%}
+.self{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.self label{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);cursor:pointer}
+.self input{margin-top:5px;accent-color:var(--green)}
+.subh{font-size:1.5rem;margin-top:48px}
 footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
 </style>
 </head>
@@ -234,8 +359,11 @@ footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute
     <nav aria-label="Secciones">
       <a href="#linea">Línea de tiempo</a>
       <a href="#santiago-1863">Santiago 1863</a>
+      <a href="#laboratorio">Simuladores</a>
+      <a href="#videos">Videos</a>
       <a href="#presidentes">Presidentes</a>
       <a href="#actividades">Actividades</a>
+      <a href="#evaluacion">Evaluación</a>
       <a href="#fuentes">Fuentes</a>
     </nav>
   </div>
@@ -243,7 +371,7 @@ footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute
 
 <main id="inicio">
   <div class="wrap hero">
-    <div class="eyebrow">Línea de tiempo educativa · Antes de 1492 – 2026</div>
+    <div class="eyebrow">Espacio web educativo · Ciencias Sociales · Nivel Secundario</div>
     <h1>Historia de la <em>República Dominicana</em></h1>
     <div class="sub">De Caonabo a nuestros días: identidad, soberanía y construcción nacional</div>
     <div class="read">
@@ -266,6 +394,45 @@ footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute
       <div><b>¿Por qué es importante?</b><span>Su significado para comprender nuestra historia.</span></div>
     </div>
   </div>
+
+  <section class="block" id="espacio">
+    <div class="wrap">
+      <div class="eyebrow">Sobre este espacio</div>
+      <h2>Un aula abierta para estudiar la historia dominicana</h2>
+      <p class="lead">Este espacio web reúne textos, ilustraciones, videos, simuladores, software educativo y actividades de evaluación para que el estudiantado comprenda la formación de la nación dominicana a partir de fuentes y hechos documentados.</p>
+      <dl class="meta-grid">
+        <div><dt>Área curricular</dt><dd>Ciencias Sociales: Historia dominicana</dd></div>
+        <div><dt>Nivel educativo</dt><dd>Nivel Secundario</dd></div>
+        <div><dt>Modalidad de uso</dt><dd>Presencial, a distancia o mixta, en computadora o celular</dd></div>
+      </dl>
+      <div class="two">
+        <div>
+          <h3>Competencias fundamentales</h3>
+          <ul>
+            <li><b>Ética y Ciudadana:</b> valorar la soberanía, los derechos humanos y la participación ciudadana a partir del pasado.</li>
+            <li><b>Pensamiento Lógico, Creativo y Crítico:</b> distinguir hechos documentados de interpretaciones y contrastar fuentes.</li>
+            <li><b>Comunicativa:</b> explicar procesos históricos de forma oral y escrita con vocabulario preciso.</li>
+            <li><b>Científica y Tecnológica:</b> usar recursos digitales para investigar, organizar y presentar información histórica.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Propósitos de aprendizaje</h3>
+          <ul>
+            <li>Ubicar en el tiempo los principales procesos de la historia dominicana, desde los pueblos originarios hasta la actualidad.</li>
+            <li>Explicar cómo cambió la soberanía sobre la isla y distinguir ocupación, reconocimiento diplomático y frontera.</li>
+            <li>Analizar la Guerra de la Restauración a partir de un caso local: Santiago de los Caballeros en 1863.</li>
+            <li>Evaluar la información con criterios de evidencia, citando fuentes primarias y secundarias.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="route" aria-label="Ruta de aprendizaje">
+        <a href="#linea"><span class="step">Paso 1 · Explora</span><b>Lee y ubica</b><span class="r">Recorre la línea de tiempo y la sección especial de Santiago 1863.</span><span class="tags"><i>Textos</i><i>Ilustraciones</i></span></a>
+        <a href="#videos"><span class="step">Paso 2 · Observa</span><b>Mira y anota</b><span class="r">Observa los videos con su guía de preguntas.</span><span class="tags"><i>Videos</i></span></a>
+        <a href="#laboratorio"><span class="step">Paso 3 · Experimenta</span><b>Simula y compara</b><span class="r">Usa los simuladores y el software educativo para ver los cambios en el mapa.</span><span class="tags"><i>Simuladores</i><i>Software</i></span></a>
+        <a href="#evaluacion"><span class="step">Paso 4 · Demuestra</span><b>Evalúa lo aprendido</b><span class="r">Responde el cuestionario, realiza una actividad y valórate con la rúbrica.</span><span class="tags"><i>Evaluación</i></span></a>
+      </div>
+    </div>
+  </section>
 
   <section class="block" id="linea">
     <div class="wrap">
@@ -350,6 +517,113 @@ footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute
     </div>
   </section>
 
+  <section class="block" id="laboratorio">
+    <div class="wrap">
+      <div class="eyebrow">Paso 3 · Experimenta</div>
+      <h2>Simuladores</h2>
+      <p class="lead">Dos simuladores permiten ver cómo cambian los hechos en el espacio. Los mapas son ilustraciones esquemáticas, creadas para este sitio con fines didácticos: no están a escala y no reproducen fronteras históricas exactas.</p>
+
+      <div class="lab" id="sim-isla">
+        <div class="eyebrow">Simulador 1</div>
+        <h3>La isla en el tiempo</h3>
+        <p class="how-to">Mueve el control o elige un año para ver quién ejercía el dominio sobre cada parte de la isla. Observa cuándo la isla estuvo bajo un solo poder y cuándo estuvo dividida.</p>
+        <div class="map-wrap" id="islaMap" role="img" aria-label="Mapa esquemático de la isla de Santo Domingo coloreado según el poder que la dominaba en el año elegido"></div>
+        <label for="islaRange" style="position:absolute;left:-9999px">Elegir momento histórico</label>
+        <input type="range" id="islaRange" class="sim-range" min="0" max="11" step="1" value="0">
+        <div class="steps" id="islaSteps"></div>
+        <div class="sim-out" aria-live="polite"><div class="yr" id="islaYr"></div><div><h4 id="islaT"></h4><p id="islaP"></p></div></div>
+        <div class="keys">
+          <span><i class="k-ind"></i>Pueblos indígenas</span><span><i class="k-esp"></i>España</span><span><i class="k-fra"></i>Francia</span><span><i class="k-hai"></i>Haití</span><span><i class="k-he"></i>Haití Español (1821–1822)</span><span><i class="k-rd"></i>República Dominicana</span>
+        </div>
+        <p class="note-sm">La línea punteada marca la frontera actual solo como referencia de ubicación. La frontera de 1777 seguía otro trazado en varios tramos.</p>
+      </div>
+
+      <div class="lab" id="sim-santiago">
+        <div class="eyebrow">Simulador 2</div>
+        <h3>El asedio de Santiago, paso a paso</h3>
+        <p class="how-to">Avanza por las fechas para seguir los movimientos de la batalla de Santiago de 1863. Los puntos rojos son posiciones restauradoras; las flechas, desplazamientos de tropas.</p>
+        <div class="map-wrap">
+          <svg viewBox="0 0 640 400" id="stgMap" role="img" aria-label="Esquema ilustrativo de Santiago en septiembre de 1863">
+            <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--ink)"/></marker></defs>
+            <rect x="0" y="0" width="640" height="400" class="svg-sea"/>
+            <path class="city" d="M300 95 L560 80 L585 230 L470 262 L350 262 L290 220 Z"/>
+            <g>
+              <rect class="blk" x="320" y="110" width="40" height="28"/><rect class="blk" x="368" y="108" width="40" height="28"/><rect class="blk" x="416" y="106" width="40" height="28"/><rect class="blk" x="464" y="104" width="40" height="28"/><rect class="blk" x="512" y="102" width="36" height="28"/>
+              <rect class="blk" x="320" y="146" width="40" height="28"/><rect class="blk" x="368" y="144" width="40" height="28"/><rect class="blk" x="416" y="142" width="40" height="28"/><rect class="blk" x="464" y="140" width="40" height="28"/><rect class="blk" x="512" y="138" width="40" height="28"/>
+              <rect class="blk" x="330" y="182" width="40" height="28"/><rect class="blk" x="378" y="180" width="40" height="28"/><rect class="blk" x="426" y="178" width="40" height="28"/><rect class="blk" x="474" y="176" width="40" height="28"/><rect class="blk" x="522" y="174" width="40" height="28"/>
+            </g>
+            <ellipse class="fire" data-on="3,4,5,6" cx="430" cy="170" rx="150" ry="85"/>
+            <path class="river" d="M-10 300 C 140 340, 250 255, 380 282 S 560 330, 650 255"/>
+            <text class="svg-txt m" x="520" y="322">río Yaque del Norte</text>
+            <rect class="fort" x="352" y="228" width="30" height="24" rx="2"/>
+            <text class="svg-txt b" x="300" y="222">Fortaleza San Luis</text>
+            <rect class="fort" x="548" y="86" width="18" height="16" rx="2"/>
+            <text class="svg-txt m" x="520" y="76">El Castillo</text>
+            <rect class="fort" x="436" y="214" width="16" height="14" rx="2"/>
+            <text class="svg-txt m" x="458" y="226">Cárcel Vieja</text>
+            <text class="svg-txt b" x="410" y="60">Santiago</text>
+
+            <text class="svg-txt b" x="230" y="372">La Otra Banda</text>
+            <circle class="pos dim" data-on="3,4,5,6" cx="330" cy="335" r="9"/>
+            <text class="svg-txt m dim" data-on="3,4,5,6" x="344" y="340">cantón de José María Checo</text>
+
+            <circle class="pos dim" data-on="0,1,2,3,4,5,6" cx="60" cy="70" r="7"/>
+            <text class="svg-txt" x="20" y="54">Quinigua</text>
+            <path class="arrow" data-on="0" d="M72 80 C 160 110, 220 130, 285 150"/>
+            <path class="arrow" data-on="1" d="M120 210 C 190 200, 240 190, 288 182"/>
+            <text class="svg-txt m dim" data-on="1" x="80" y="232">llegada de Salcedo</text>
+
+            <circle class="pos dim" data-on="2,3,4,5,6" cx="250" cy="70" r="7"/>
+            <text class="svg-txt" x="214" y="56">Gurabito</text>
+            <circle class="pos dim" data-on="3,4,5,6" cx="290" cy="120" r="7"/>
+            <circle class="pos dim" data-on="3,4,5,6" cx="600" cy="170" r="7"/>
+            <circle class="pos dim" data-on="3,4,5,6" cx="430" cy="290" r="7"/>
+
+            <circle class="pos dim" data-on="4,5,6" cx="470" cy="22" r="7"/>
+            <text class="svg-txt" x="456" y="27" text-anchor="end">Jácuba, camino a Puerto Plata</text>
+            <circle class="pos dim" data-on="4,5,6" cx="70" cy="300" r="7"/>
+            <text class="svg-txt" x="40" y="285">Marilópez</text>
+
+            <path class="arrow esp" data-on="5" d="M440 110 C 450 80, 455 55, 462 34"/>
+            <text class="svg-txt m dim" data-on="5" x="470" y="70">retirada española</text>
+            <text class="svg-txt b dim" data-on="6" x="380" y="130" style="font-size:14px">Acta de Independencia</text>
+          </svg>
+        </div>
+        <div class="steps" id="stgSteps"></div>
+        <div class="sim-out" aria-live="polite"><div class="yr" id="stgYr" style="font-size:1.4rem"></div><div><h4 id="stgT"></h4><p id="stgP"></p></div></div>
+        <div class="btns"><button class="btn ghost" type="button" id="stgPrev">Anterior</button><button class="btn" type="button" id="stgNext">Siguiente</button></div>
+        <p class="note-sm">Esquema ilustrativo: las posiciones son aproximadas y sirven para comprender el cerco, no para ubicar lugares exactos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="videos">
+    <div class="wrap">
+      <div class="eyebrow">Paso 2 · Observa</div>
+      <h2>Videoteca</h2>
+      <p class="lead">Episodios de la serie educativa de historia dominicana de la Fundación Corripio. Mira cada video con su guía y anota tus respuestas antes de pasar a la evaluación.</p>
+      <div class="vgrid" id="vgrid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="software">
+    <div class="wrap">
+      <div class="eyebrow">Paso 3 · Experimenta</div>
+      <h2>Software educativo</h2>
+      <p class="lead">Herramientas integradas en este espacio y aplicaciones externas gratuitas para investigar, crear y practicar.</p>
+      <div class="sw">
+        <div><span class="ty in">En este sitio</span><div><b><a href="#sim-isla">Simulador «La isla en el tiempo»</a></b><p>Mapa interactivo de la soberanía sobre la isla entre 1492 y 1865.</p></div></div>
+        <div><span class="ty in">En este sitio</span><div><b><a href="#sim-santiago">Simulador del asedio de Santiago</a></b><p>Recorrido paso a paso por la batalla de septiembre de 1863.</p></div></div>
+        <div><span class="ty in">En este sitio</span><div><b><a href="#juego">Juego «¿Qué ocurrió primero?»</a></b><p>Ordena acontecimientos y recibe corrección inmediata.</p></div></div>
+        <div><span class="ty in">En este sitio</span><div><b><a href="#evaluacion">Cuestionario autocorregido</a></b><p>Diez preguntas con retroalimentación y calificación final.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://earth.google.com/web/" target="_blank" rel="noopener">Google Earth</a></b><p>Busca «Fortaleza San Luis, Santiago» y recorre el río Yaque y La Otra Banda en vista satelital.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://timeline.knightlab.com" target="_blank" rel="noopener">TimelineJS</a></b><p>Crea tu propia línea de tiempo multimedia a partir de una hoja de cálculo.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://www.educaplay.com" target="_blank" rel="noopener">Educaplay</a></b><p>Diseña crucigramas, sopas de letras y mapas interactivos sobre la Restauración.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://www.educando.edu.do" target="_blank" rel="noopener">Educando (MINERD)</a></b><p>Portal educativo del Ministerio de Educación con recursos para el Nivel Secundario.</p></div></div>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="presidentes">
     <div class="wrap">
       <div class="eyebrow">Sección especial · Poder Ejecutivo desde 1844</div>
@@ -398,6 +672,48 @@ footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute
     </div>
   </section>
 
+  <section class="block" id="evaluacion">
+    <div class="wrap">
+      <div class="eyebrow">Paso 4 · Demuestra</div>
+      <h2>Evaluación</h2>
+      <p class="lead">Tres momentos de evaluación: un cuestionario autocorregido (evaluación formativa), una rúbrica para las actividades (heteroevaluación y coevaluación) y una lista de autoevaluación.</p>
+
+      <h3 class="subh">Cuestionario</h3>
+      <p class="lead">Elige una respuesta en cada pregunta. Verás la explicación al instante y tu calificación al final.</p>
+      <form id="quiz" class="quiz"></form>
+      <div class="score" id="score" aria-live="polite">
+        <span class="num" id="scoreNum">0 / 10</span>
+        <span id="scoreMsg">Responde las preguntas para ver tu resultado.</span>
+        <button class="btn ghost" type="button" id="quizReset">Reiniciar</button>
+      </div>
+
+      <h3 class="subh">Rúbrica para las actividades</h3>
+      <p class="lead">Úsala para valorar las Actividades 1 a 4. Cada criterio vale de 1 a 4 puntos; el máximo es 16.</p>
+      <div class="rubric">
+        <table>
+          <thead><tr><th>Criterio</th><th>Excelente (4)</th><th>Bueno (3)</th><th>En proceso (2)</th><th>Inicial (1)</th></tr></thead>
+          <tbody>
+            <tr><td>Uso de fuentes</td><td>Cita al menos una fuente primaria y una secundaria, y explica qué aporta cada una.</td><td>Cita dos fuentes, pero explica solo una.</td><td>Cita una sola fuente.</td><td>No cita fuentes.</td></tr>
+            <tr><td>Precisión histórica</td><td>Fechas, lugares y protagonistas correctos y bien relacionados.</td><td>Datos correctos con algún error menor.</td><td>Varios errores en fechas o protagonistas.</td><td>La información no corresponde al hecho estudiado.</td></tr>
+            <tr><td>Pensamiento crítico</td><td>Distingue hechos de interpretaciones y explica causas y consecuencias.</td><td>Explica causas o consecuencias, pero no ambas.</td><td>Describe el hecho sin analizarlo.</td><td>Repite el texto sin elaboración propia.</td></tr>
+            <tr><td>Comunicación</td><td>Texto claro, ordenado y con vocabulario histórico adecuado.</td><td>Texto claro con pocas imprecisiones.</td><td>Ideas desordenadas o incompletas.</td><td>El mensaje no se comprende.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subh">Autoevaluación</h3>
+      <p class="lead">Marca lo que ya puedes hacer. Lo que quede sin marcar te indica qué repasar.</p>
+      <ul class="self">
+        <li><label for="s1"><input type="checkbox" id="s1">Puedo ordenar en el tiempo los grandes procesos de la historia dominicana.</label></li>
+        <li><label for="s2"><input type="checkbox" id="s2">Puedo explicar la diferencia entre los tratados de Ryswick, Aranjuez y Basilea.</label></li>
+        <li><label for="s3"><input type="checkbox" id="s3">Puedo narrar qué ocurrió en Santiago entre el 6 y el 14 de septiembre de 1863.</label></li>
+        <li><label for="s4"><input type="checkbox" id="s4">Puedo distinguir un presidente constitucional de uno provisional o de facto.</label></li>
+        <li><label for="s5"><input type="checkbox" id="s5">Puedo encontrar y citar una fuente confiable para comprobar un dato histórico.</label></li>
+      </ul>
+      <p class="note-sm" id="selfMsg"></p>
+    </div>
+  </section>
+
   <section class="block" id="fuentes">
     <div class="wrap">
       <div class="eyebrow">Para verificar y profundizar</div>
@@ -417,10 +733,11 @@ footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--mute
 </main>
 
 <footer>
-  <div class="wrap">Historia de la República Dominicana · Recurso educativo de libre consulta · Contenido revisado el 12 de octubre de 2026</div>
+  <div class="wrap">Historia de la República Dominicana · Espacio web educativo para el Nivel Secundario, área de Ciencias Sociales · Elaborado por Arleni Hernández Rodríguez, Escuela de Postgrado, UAPA · Contenido revisado el 12 de octubre de 2026</div>
 </footer>
 
-<script>
+<script>window.EMBED_VIDEOS=true;
+
 const CAPS = [
   "Los primeros habitantes y el inicio de la colonización",
   "Colonización, resistencia y configuración territorial",
@@ -737,6 +1054,170 @@ document.getElementById("check").addEventListener("click",()=>{
 });
 document.getElementById("shuffle").addEventListener("click",newRound);
 newRound();
+
+/* ---------- Simulador 1: La isla en el tiempo ---------- */
+(function(){
+  const X=lon=>((lon+74.6)*104).toFixed(1), Y=lat=>((20.05-lat)*112).toFixed(1);
+  const pt=([a,b])=>X(a)+","+Y(b);
+  const N=[-71.75,19.72], S=[-71.75,18.03];
+  const eastCoast=[[-71.65,19.88],[-71.2,19.9],[-70.7,19.8],[-70.3,19.72],[-69.95,19.68],[-69.75,19.45],[-69.6,19.33],[-69.15,19.3],[-69.3,19.17],[-69.6,19.12],[-69.2,19.02],[-69.0,19.05],[-68.7,18.92],[-68.45,18.75],[-68.33,18.6],[-68.45,18.35],[-68.95,18.4],[-69.3,18.43],[-69.9,18.45],[-70.2,18.25],[-70.55,18.22],[-70.75,18.3],[-70.95,18.25],[-71.1,18.1],[-71.3,17.85],[-71.42,17.6],[-71.65,17.8]];
+  const westCoast=[[-72.1,18.15],[-72.55,18.22],[-73.0,18.18],[-73.75,18.19],[-74.1,18.3],[-74.48,18.4],[-74.4,18.6],[-74.1,18.65],[-73.6,18.5],[-73.1,18.45],[-72.65,18.5],[-72.35,18.55],[-72.5,18.8],[-72.8,19.1],[-72.7,19.45],[-73.0,19.6],[-73.4,19.8],[-73.0,19.92],[-72.5,19.9],[-72.2,19.76],[-71.85,19.73]];
+  const border=[N,[-71.7,19.5],[-71.65,19.25],[-71.75,19.0],[-71.65,18.85],[-71.9,18.6],[-71.95,18.4],S];
+  const east=[N,...eastCoast,S,...border.slice().reverse().slice(1,-1)].map(pt).join(" ");
+  const west=[S,...westCoast,N,...border.slice(1,-1)].map(pt).join(" ");
+  const cities=[
+    {n:"Santo Domingo",c:[-69.9,18.47],f:1,dx:-40,dy:20},{n:"Santiago",c:[-70.7,19.45],f:1,dx:8,dy:4},
+    {n:"Puerto Plata",c:[-70.69,19.79],f:1,dx:8,dy:-6},{n:"Cabo Francés",c:[-72.2,19.76],f:3,dx:-30,dy:-10},
+    {n:"Puerto Príncipe",c:[-72.33,18.54],f:4,dx:-30,dy:20}];
+  const ST=[
+    {y:"Antes de 1492",t:"Los primeros habitantes",w:"ind",e:"ind",lw:"Pueblos indígenas",p:"La isla estaba habitada por pueblos de tradición arahuaca, especialmente los taínos, junto con otras comunidades, organizados en cacicazgos."},
+    {y:"1492–1605",t:"La colonia española",w:"esp",e:"esp",lw:"España",p:"Tras la llegada de Colón en 1492, España colonizó toda la isla. Fundó La Isabela (1494) y Santo Domingo, que se convirtió en el centro administrativo de la colonia."},
+    {y:"1605–1606",t:"Las Devastaciones de Osorio",w:"esp",e:"esp",lw:"España",hw:"g",p:"España despobló comunidades del norte y el oeste para combatir el contrabando. El control efectivo de esas zonas se debilitó, lo que más tarde facilitó la llegada de colonos franceses."},
+    {y:"1697",t:"Tratado de Ryswick",w:"esp",e:"esp",lw:"Asentamientos franceses",le:"España",hw:"v",p:"Francia y España firman la paz en Europa. El tratado no menciona la isla ni traza una frontera, pero los asentamientos franceses del oeste continúan consolidándose de hecho."},
+    {y:"1777",t:"Tratado de Aranjuez",w:"fra",e:"esp",lw:"Francia (Saint-Domingue)",le:"España (Santo Domingo)",b:1,p:"España y Francia delimitan formalmente sus colonias. Por primera vez, un tratado fija una frontera entre la parte francesa y la española."},
+    {y:"1795",t:"Tratado de Basilea",w:"fra",e:"fra",lw:"Francia",p:"España cede a Francia su parte de la isla. La ocupación efectiva de la parte oriental se produjo años después, en medio de la revolución en la colonia francesa."},
+    {y:"1804",t:"Independencia de Haití",w:"hai",e:"fra",lw:"Haití",le:"Francia",b:1,p:"Tras la Revolución haitiana, Haití proclama su independencia en el oeste. Las tropas francesas permanecen en la parte oriental."},
+    {y:"1809",t:"La Reconquista",w:"hai",e:"esp",lw:"Haití",le:"España",b:1,p:"La Guerra de la Reconquista expulsa a las autoridades francesas y la parte oriental vuelve al dominio español."},
+    {y:"1821",t:"La Independencia Efímera",w:"hai",e:"he",lw:"Haití",le:"Haití Español",b:1,p:"José Núñez de Cáceres proclama el Estado Independiente del Haití Español en diciembre de 1821. Dura apenas unas semanas."},
+    {y:"1822–1844",t:"La isla unificada bajo Haití",w:"hai",e:"hai",lw:"Haití",p:"En 1822, el presidente haitiano Jean-Pierre Boyer unifica la isla. Se abole la esclavitud en la parte oriental y surgen tensiones que conducen a la independencia."},
+    {y:"1844",t:"Nace la República Dominicana",w:"hai",e:"rd",lw:"Haití",le:"República Dominicana",b:1,p:"El 27 de febrero de 1844 se proclama la independencia. La nueva república defiende su soberanía en las batallas de Azua y Santiago."},
+    {y:"1861–1865",t:"La Anexión a España",w:"hai",e:"esp",lw:"Haití",le:"España",b:1,p:"Pedro Santana anexa el país a España en 1861. El Grito de Capotillo (1863) inicia la Guerra de la Restauración, que termina con la salida española en 1865."},
+    {y:"1865 – hoy",t:"La República restaurada",w:"hai",e:"rd",lw:"Haití",le:"República Dominicana",b:1,p:"Se restablece la soberanía dominicana. Desde entonces la isla está compartida por la República Dominicana y Haití."}
+  ];
+  const lw=[-73.1,19.05], le=[-70.25,18.85];
+  document.getElementById("islaMap").innerHTML=`<svg viewBox="0 0 680 290" xmlns="http://www.w3.org/2000/svg">
+    <defs><pattern id="hv" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" class="hatch-line"/></pattern>
+    <pattern id="hg" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" style="stroke:var(--muted);stroke-width:1.2"/></pattern></defs>
+    <rect width="680" height="290" class="svg-sea"/>
+    <text class="svg-txt m" x="560" y="16">Océano Atlántico</text><text class="svg-txt m" x="250" y="282">Mar Caribe</text>
+    <polygon id="zW" class="zone" points="${west}"/><polygon id="zE" class="zone" points="${east}"/>
+    <polygon id="hW" points="${west}" style="stroke:none" fill="none"/>
+    <polyline id="bRef" class="border-ref" points="${border.map(pt).join(" ")}"/>
+    <text id="tW" class="svg-txt b" text-anchor="middle" x="${X(lw[0])}" y="${Y(lw[1])}"></text>
+    <text id="tE" class="svg-txt b" text-anchor="middle" x="${X(le[0])}" y="${Y(le[1])}"></text>
+    ${cities.map((c,i)=>`<g id="cty${i}"><circle class="svg-dot" r="3" cx="${X(c.c[0])}" cy="${Y(c.c[1])}"/><text class="svg-txt m" x="${+X(c.c[0])+c.dx}" y="${+Y(c.c[1])+c.dy}">${c.n}</text></g>`).join("")}
+  </svg>`;
+  const range=document.getElementById("islaRange"); range.max=ST.length-1;
+  const stepsEl=document.getElementById("islaSteps");
+  stepsEl.innerHTML=ST.map((s,i)=>`<button type="button" data-i="${i}" aria-pressed="false">${s.y}</button>`).join("");
+  function show(i){
+    const s=ST[i]; range.value=i;
+    const zW=document.getElementById("zW"), zE=document.getElementById("zE"), hW=document.getElementById("hW");
+    zW.setAttribute("class","zone z-"+s.w); zE.setAttribute("class","zone z-"+s.e);
+    hW.setAttribute("fill", s.hw==="v"?"url(#hv)":s.hw==="g"?"url(#hg)":"none");
+    document.getElementById("bRef").style.display = s.b ? "" : "none";
+    const same = !s.le;
+    const tW=document.getElementById("tW"), tE=document.getElementById("tE");
+    if(same){ tW.textContent=""; tE.textContent=s.lw; tE.setAttribute("x",X(-71.6)); }
+    else { tW.textContent=s.lw; tE.textContent=s.le; tE.setAttribute("x",X(le[0])); }
+    cities.forEach((c,k)=>{document.getElementById("cty"+k).style.display = i>=c.f ? "" : "none";});
+    document.getElementById("islaYr").textContent=s.y;
+    document.getElementById("islaT").textContent=s.t;
+    document.getElementById("islaP").textContent=s.p;
+    stepsEl.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed", +b.dataset.i===i));
+  }
+  range.addEventListener("input",()=>show(+range.value));
+  stepsEl.addEventListener("click",e=>{const b=e.target.closest("button"); if(b) show(+b.dataset.i);});
+  show(0);
+})();
+
+/* ---------- Simulador 2: Santiago 1863 ---------- */
+(function(){
+  const S=[
+    {d:"31 de agosto",t:"Polanco marcha desde Quinigua",p:"El general Gaspar Polanco sale de Quinigua con unos 6,000 hombres rumbo a Santiago."},
+    {d:"1 de septiembre",t:"Llega José Antonio Salcedo",p:"El coronel Salcedo (Pepillo) llega a Santiago y se suma al cerco de la ciudad."},
+    {d:"Primeros días de septiembre",t:"Los españoles se atrincheran",p:"Tras el combate de Gurabito, la guarnición española se refugia en la Fortaleza San Luis, el Castillo y la Cárcel Vieja."},
+    {d:"6 de septiembre",t:"Batalla e incendio",p:"Los restauradores atacan la fortaleza. José María Checo comanda el cantón de La Otra Banda. Por orden de Polanco se incendia la ciudad, y el viento del este propaga el fuego."},
+    {d:"12 de septiembre",t:"Victorias en los alrededores",p:"Los restauradores vencen en Jácuba, La Otra Banda y Marilópez, y cortan el auxilio que llegaba desde Puerto Plata."},
+    {d:"13 de septiembre",t:"Retirada española",p:"A las tres de la tarde, las tropas españolas abandonan Santiago rumbo a Puerto Plata, hostigadas por las guerrillas."},
+    {d:"14 de septiembre",t:"Acta de Independencia",p:"En Santiago se firma el Acta de Independencia y se instala el Gobierno restaurador, presidido por José Antonio Salcedo."}
+  ];
+  let cur=0;
+  const st=document.getElementById("stgSteps");
+  st.innerHTML=S.map((s,i)=>`<button type="button" data-i="${i}" aria-pressed="false">${s.d}</button>`).join("");
+  function show(i){
+    cur=i; const s=S[i];
+    document.querySelectorAll("#stgMap [data-on]").forEach(el=>{
+      const on=el.dataset.on.split(",").map(Number).includes(i);
+      el.classList.toggle("on",on);
+    });
+    document.getElementById("stgYr").textContent=s.d;
+    document.getElementById("stgT").textContent=s.t;
+    document.getElementById("stgP").textContent=s.p;
+    st.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed", +b.dataset.i===i));
+    document.getElementById("stgPrev").disabled = i===0;
+    document.getElementById("stgNext").disabled = i===S.length-1;
+  }
+  st.addEventListener("click",e=>{const b=e.target.closest("button"); if(b) show(+b.dataset.i);});
+  document.getElementById("stgPrev").addEventListener("click",()=>cur>0&&show(cur-1));
+  document.getElementById("stgNext").addEventListener("click",()=>cur<S.length-1&&show(cur+1));
+  show(0);
+})();
+
+/* ---------- Videoteca ---------- */
+(function(){
+  const V=[
+    {id:"kw24t_vg6_4",ep:"Episodio 47",t:"La Primera Independencia Dominicana, 1821: la Independencia Efímera de José Núñez de Cáceres",d:"El intento de 1821 de separar la parte oriental de España y por qué no logró consolidarse.",q:["¿Qué nombre recibió el Estado proclamado en 1821?","¿Por qué crees que no logró sostenerse?","¿Qué diferencia hay entre 1821 y 1844?"]},
+    {id:"KMmefj7Kq1I",ep:"Episodio 31",t:"La Guerra Restauradora, parte 3: la batalla de Guayubín",d:"Los combates tras el Grito de Capotillo, la lucha por Santiago y la formación del gobierno restaurador.",q:["¿Qué ocurrió después del Grito de Capotillo?","¿Por qué era importante tomar Santiago?","¿Qué decidió el gobierno restaurador al instalarse?"]},
+    {id:"hFTwz0SyL7M",ep:"Episodio 32",t:"La Guerra Restauradora, parte 4: Arroyo Bermejo",d:"Santana frente a Luperón, el desenlace de la guerra y la salida de las tropas españolas en 1865.",q:["¿Quiénes se enfrentaron en Arroyo Bermejo?","¿Qué papel tuvo Pedro Santana en esta etapa?","¿Cómo terminó la presencia española?"]}
+  ];
+  const embed = !!window.EMBED_VIDEOS;
+  document.getElementById("vgrid").innerHTML=V.map(v=>`<article class="vcard">
+    ${embed?`<iframe class="vframe" src="https://www.youtube-nocookie.com/embed/${v.id}" title="${esc(v.t)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
+      :`<a class="vthumb" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" aria-label="Ver en YouTube: ${esc(v.t)}"><span class="ep">${v.ep} · Fundación Corripio</span><span class="play" aria-hidden="true"></span><span class="src">Ver en YouTube</span></a>`}
+    <div class="vbody"><h4>${esc(v.t)}</h4><p>${esc(v.d)}</p><div class="lbl">Guía de observación</div><ol>${v.q.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div>
+  </article>`).join("");
+})();
+
+/* ---------- Cuestionario ---------- */
+(function(){
+  const Q=[
+    {q:"¿Qué tratado delimitó por primera vez, de forma directa, las posesiones española y francesa en la isla?",o:["Ryswick (1697)","Aranjuez (1777)","Basilea (1795)","Utrecht (1713)"],a:1,e:"El Tratado de Aranjuez (1777) estableció disposiciones específicas para delimitar ambas colonias."},
+    {q:"¿Cuál afirmación sobre el Tratado de Ryswick es correcta?",o:["Dividió la isla en dos partes iguales.","Cedió toda la isla a Francia.","No menciona expresamente la isla ni traza una frontera.","Creó la República Dominicana."],a:2,e:"Ryswick puso fin a una guerra europea; no nombra la isla ni fija una frontera, como explica el historiador Blancpain."},
+    {q:"¿Qué tratado cedió a Francia la parte española de la isla?",o:["Aranjuez","Basilea","Ryswick","Tordesillas"],a:1,e:"Por el Tratado de Basilea (1795), España cedió su parte de la isla a Francia."},
+    {q:"¿Quién proclamó la Independencia Efímera en 1821?",o:["Juan Pablo Duarte","José Núñez de Cáceres","Juan Sánchez Ramírez","Pedro Santana"],a:1,e:"José Núñez de Cáceres proclamó el Estado Independiente del Haití Español en diciembre de 1821."},
+    {q:"¿Dónde se encontraba Juan Pablo Duarte la noche del 27 de febrero de 1844?",o:["En la Puerta del Conde","En Santiago","En el exilio","En San Cristóbal"],a:2,e:"Duarte estaba en el exilio y regresó al país a mediados de marzo de 1844."},
+    {q:"¿Quién comandó el cantón de La Otra Banda en la batalla de Santiago del 6 de septiembre de 1863?",o:["Gregorio Luperón","José María Checo","Benito Monción","Santiago Rodríguez"],a:1,e:"El general José María Checo tuvo a su cargo el cantón de La Otra Banda."},
+    {q:"¿Con qué propósito ordenó Gaspar Polanco incendiar Santiago?",o:["Castigar a la población","Que la ciudad dejara de servir de refugio y abastecimiento a los españoles","Celebrar la victoria","Destruir la Fortaleza San Luis"],a:1,e:"Sin casas ni abastecimiento, la plaza perdió su valor para las tropas españolas, que se retiraron a Puerto Plata."},
+    {q:"¿Qué documento se firmó en Santiago el 14 de septiembre de 1863?",o:["La primera Constitución","El Acta de Independencia de la Restauración","El Tratado de Aranjuez","El Manifiesto del 16 de enero"],a:1,e:"Al día siguiente de la retirada española se firmó el Acta de Independencia y se instaló el Gobierno restaurador."},
+    {q:"Entre 1922 y 1924, durante la ocupación estadounidense, ¿quién encabezó un gobierno provisional dominicano?",o:["Horacio Vásquez","Juan Bautista Vicini Burgos","Francisco Henríquez y Carvajal","Rafael Estrella Ureña"],a:1,e:"Juan Bautista Vicini Burgos fue presidente provisional desde octubre de 1922 y preparó la transición."},
+    {q:"¿Por qué el 25 de noviembre es un día internacional?",o:["Por la muerte de Trujillo","Por la memoria de las hermanas Mirabal","Por la Revolución de Abril","Por la independencia de Haití"],a:1,e:"En memoria de las hermanas Mirabal, la ONU declaró en 1999 el Día Internacional de la Eliminación de la Violencia contra la Mujer."}
+  ];
+  const form=document.getElementById("quiz");
+  form.innerHTML=Q.map((x,i)=>`<div class="q"><fieldset><legend><span class="qn">${i+1}/${Q.length}</span>${esc(x.q)}</legend>
+    <div class="opts">${x.o.map((o,j)=>`<label for="q${i}o${j}"><input type="radio" name="q${i}" id="q${i}o${j}" value="${j}"><span>${esc(o)}</span></label>`).join("")}</div>
+    <p class="fb" id="fb${i}" hidden></p></fieldset></div>`).join("");
+  form.addEventListener("submit",e=>e.preventDefault());
+  function update(){
+    let ans=0, ok=0;
+    Q.forEach((x,i)=>{
+      const sel=form.querySelector(`input[name="q${i}"]:checked`);
+      const fb=document.getElementById("fb"+i);
+      form.querySelectorAll(`input[name="q${i}"]`).forEach(inp=>{
+        inp.parentElement.classList.remove("ok","bad");
+        if(sel){ inp.disabled=true; if(+inp.value===x.a) inp.parentElement.classList.add("ok"); else if(inp===sel) inp.parentElement.classList.add("bad"); }
+        else inp.disabled=false;
+      });
+      if(sel){ ans++; const good=+sel.value===x.a; if(good) ok++;
+        fb.hidden=false; fb.className="fb"+(good?"":" no"); fb.innerHTML=`<b>${good?"Correcto.":"Incorrecto."}</b> ${esc(x.e)}`; }
+      else fb.hidden=true;
+    });
+    document.getElementById("scoreNum").textContent=`${ok} / ${Q.length}`;
+    document.getElementById("scoreMsg").textContent = ans<Q.length ? `Has respondido ${ans} de ${Q.length} preguntas.`
+      : ok>=9 ? "Excelente dominio del tema." : ok>=7 ? "Buen dominio. Repasa las preguntas marcadas en rojo." : ok>=5 ? "En proceso. Vuelve a la línea de tiempo y a los simuladores." : "Inicial. Recorre de nuevo la ruta de aprendizaje desde el paso 1.";
+  }
+  form.addEventListener("change",update);
+  document.getElementById("quizReset").addEventListener("click",()=>{form.reset(); form.querySelectorAll("input").forEach(i=>i.disabled=false); update();});
+  update();
+})();
+
+/* ---------- Autoevaluación ---------- */
+(function(){
+  const boxes=[...document.querySelectorAll(".self input")];
+  const msg=document.getElementById("selfMsg");
+  const upd=()=>{const n=boxes.filter(b=>b.checked).length; msg.textContent=`Has marcado ${n} de ${boxes.length} logros.`+(n===boxes.length?" ¡Listo para presentar tu actividad!":"");};
+  boxes.forEach(b=>b.addEventListener("change",upd)); upd();
+})();
 </script>
 </body>
 </html>

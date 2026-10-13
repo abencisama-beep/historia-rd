@@ -1,0 +1,1208 @@
+<title>Historia de la República Dominicana</title>
+<meta name="description" content="Línea de tiempo educativa de la historia dominicana, de los primeros habitantes de la isla a nuestros días, con cronología presidencial y actividades para estudiantes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: archivo escolar — una columna de lectura con un eje cronológico; fecha en la margen, ficha a la derecha */
+:root{
+  --bg:#F2F4F7; --surface:#FFFFFF; --ink:#16213A; --muted:#58637A; --line:#D5DBE5;
+  --blue:#1E4C96; --blue-soft:#E3EBF7; --red:#B0261F; --red-soft:#F8E4E2; --gold:#8A6A12; --gold-soft:#F4EDD8;
+  --green:#2E6B47; --green-soft:#E0EFE6; --violet:#5B3F8C; --violet-soft:#ECE6F5; --grey-soft:#E8EBF0;
+  --display:"Alegreya", Georgia, "Times New Roman", serif;
+  --body:"Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1420; --surface:#161E2D; --ink:#E6EBF3; --muted:#9BA7BB; --line:#29344A;
+  --blue:#93B5F0; --blue-soft:#1C2A44; --red:#F2837A; --red-soft:#3A1E21; --gold:#E2C26A; --gold-soft:#332B17;
+  --green:#86CDA3; --green-soft:#183026; --violet:#C3ADEB; --violet-soft:#2A2340; --grey-soft:#222B3B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --surface:#161E2D; --ink:#E6EBF3; --muted:#9BA7BB; --line:#29344A;
+  --blue:#93B5F0; --blue-soft:#1C2A44; --red:#F2837A; --red-soft:#3A1E21; --gold:#E2C26A; --gold-soft:#332B17;
+  --green:#86CDA3; --green-soft:#183026; --violet:#C3ADEB; --violet-soft:#2A2340; --grey-soft:#222B3B; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.read{max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* barra */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;min-height:56px;overflow-x:auto;scrollbar-width:none}
+.bar .wrap::-webkit-scrollbar{display:none}
+.brand{font-family:var(--display);font-weight:800;white-space:nowrap;font-size:1.05rem;color:var(--ink);text-decoration:none}
+.brand span{color:var(--red)}
+.bar nav{display:flex;gap:4px;margin-left:auto}
+.bar nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;padding:6px 10px;border-radius:6px}
+.bar nav a:hover{color:var(--ink);background:var(--grey-soft)}
+
+/* portada */
+.hero{padding-block:clamp(40px,8vw,88px) 32px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;letter-spacing:-.01em;margin-top:12px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--blue)}
+.hero .sub{font-family:var(--display);font-size:clamp(1.2rem,2.4vw,1.5rem);color:var(--muted);margin-top:14px;font-style:italic}
+.hero p{margin-top:20px}
+.flag-rule{display:flex;height:6px;width:132px;margin-top:28px}
+.flag-rule i{flex:1}.flag-rule i:nth-child(1){background:var(--blue)}.flag-rule i:nth-child(2){background:var(--surface);border-block:1px solid var(--line)}.flag-rule i:nth-child(3){background:var(--red)}
+
+.eras{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:40px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.era{padding:16px 18px;text-decoration:none;color:var(--ink);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.era:first-child{border-left:0}
+.era:hover{background:var(--blue-soft)}
+.era .yrs{font-family:var(--mono);font-size:.8rem;color:var(--red)}
+.era b{font-family:var(--display);font-size:1.12rem;line-height:1.2}
+.era small{color:var(--muted);font-size:.88rem;line-height:1.4}
+@media (max-width:760px){.eras{grid-template-columns:1fr 1fr}.era:nth-child(3){border-left:0}.era:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:420px){.eras{grid-template-columns:1fr}.era{border-left:0!important;border-top:1px solid var(--line)}.era:first-child{border-top:0}}
+
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:36px}
+.how div{border-top:2px solid var(--ink);padding-top:10px}
+.how b{display:block;font-family:var(--display);font-size:1.05rem}
+.how span{color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.how{grid-template-columns:1fr 1fr}}
+
+section.block{padding-block:56px;border-top:1px solid var(--line)}
+section.block>.wrap>h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:800;margin-top:8px}
+.lead{color:var(--muted);margin-top:12px;max-width:68ch}
+
+/* herramientas de la línea de tiempo */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:28px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 57px);z-index:10;background:var(--bg);padding-block:12px;border-bottom:1px solid var(--line)}
+.search{flex:1 1 240px;min-width:0;display:flex}
+.search input{width:100%;font:inherit;font-size:1rem;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+select{font:inherit;font-size:.95rem;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);max-width:100%}
+.count{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+
+.chapter{margin-top:48px}
+.chapter-head{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:baseline}
+.chapter-head .num{font-family:var(--mono);color:var(--red);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.chapter-head h3{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700}
+.timeline{margin-top:20px;position:relative}
+.timeline::before{content:"";position:absolute;left:131px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.ficha{display:grid;grid-template-columns:120px 1fr;gap:24px;padding-block:14px;position:relative}
+.ficha::before{content:"";position:absolute;left:126px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--blue)}
+.ficha.key::before{background:var(--red);border-color:var(--red)}
+.ficha .date{font-family:var(--mono);font-size:.88rem;font-weight:500;padding-top:14px;text-align:right;color:var(--ink);line-height:1.35}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 22px;min-width:0;margin-left:14px}
+.card .fn{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card h4{font-family:var(--display);font-size:1.35rem;font-weight:700;margin:2px 0 10px;line-height:1.2;text-wrap:balance}
+.card .lbl{font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-top:14px}
+.card .lbl.why{color:var(--red)}
+.card p{margin:4px 0 0}
+.card .prot{margin-top:12px;font-size:.97rem;color:var(--muted)}
+.card .prot b{color:var(--ink)}
+.callout{margin-top:14px;padding:12px 16px;border-radius:8px;background:var(--gold-soft);border-left:3px solid var(--gold)}
+.callout .lbl{color:var(--gold);margin-top:0}
+.callout p+p{margin-top:8px}
+.src{margin-top:12px;font-size:.88rem;color:var(--muted);font-style:italic}
+.empty{margin-top:32px;color:var(--muted)}
+@media (max-width:640px){
+  .chapter-head{grid-template-columns:1fr;gap:4px}
+  .timeline::before{left:5px}
+  .ficha{grid-template-columns:1fr;gap:6px;padding-left:24px}
+  .ficha::before{left:0;top:20px}
+  .ficha .date{text-align:left;padding-top:14px}
+  .card{margin-left:0;padding:16px}
+}
+
+.closing{background:var(--ink);color:var(--bg);border-radius:12px;padding:clamp(24px,5vw,48px);margin-top:56px}
+.closing h3{font-size:clamp(1.5rem,3.5vw,2.2rem)}
+.closing p{max-width:62ch;margin-top:14px}
+.closing blockquote{margin:24px 0 0;font-family:var(--display);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.55rem);line-height:1.4;max-width:58ch;border-left:3px solid var(--red);padding-left:20px}
+
+/* presidentes */
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font:inherit;font-size:.88rem;font-weight:500;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .dot{width:9px;height:9px;border-radius:50%}
+.warn{margin-top:20px;padding:14px 18px;border-radius:8px;background:var(--gold-soft);border-left:3px solid var(--gold);max-width:80ch;font-size:.97rem}
+.period{margin-top:40px}
+.period h3{font-size:1.45rem}
+.period h3 .yr{font-family:var(--mono);font-size:.9rem;color:var(--red);font-weight:500;margin-left:8px}
+.period .intro{color:var(--muted);margin-top:6px;max-width:72ch}
+.tbl{overflow-x:auto;margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:.97rem}
+th{text-align:left;font-weight:700;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 14px;border-bottom:1px solid var(--line);background:var(--grey-soft)}
+td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n{font-family:var(--mono);color:var(--muted);font-size:.8rem;width:44px}
+td.name{font-weight:700}
+td.d{font-family:var(--mono);font-size:.85rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.int{white-space:nowrap;font-weight:500}
+td.cond{color:var(--muted);font-size:.93rem}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:4px;white-space:nowrap}
+.t-c{background:var(--blue-soft);color:var(--blue)}
+.t-p{background:var(--gold-soft);color:var(--gold)}
+.t-g{background:var(--green-soft);color:var(--green)}
+.t-f{background:var(--red-soft);color:var(--red)}
+.t-r{background:var(--violet-soft);color:var(--violet)}
+.t-d{background:var(--grey-soft);color:var(--ink)}
+.t-o{background:var(--grey-soft);color:var(--muted)}
+.dot.t-c{background:var(--blue)}.dot.t-p{background:var(--gold)}.dot.t-g{background:var(--green)}.dot.t-f{background:var(--red)}.dot.t-r{background:var(--violet)}.dot.t-d{background:var(--ink)}.dot.t-o{background:var(--muted)}
+.pnote{margin-top:10px;font-size:.93rem;color:var(--muted);max-width:80ch}
+.pnote b{color:var(--ink)}
+.current{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin-top:28px;padding:16px 20px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.current b{font-family:var(--display);font-size:1.3rem}
+.current span{color:var(--muted)}
+
+/* actividades */
+.acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:28px}
+@media (max-width:760px){.acts{grid-template-columns:1fr}}
+.act{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px;min-width:0}
+.act .fn{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.act h3{font-size:1.3rem;margin-top:4px}
+.act p{margin:8px 0 0}
+.act ul{margin:10px 0 0;padding-left:20px}
+.act li+li{margin-top:4px}
+
+.game{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,3vw,28px)}
+.game h3{font-size:1.4rem}
+.game ol{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:8px}
+.game li{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.game li .pos{font-family:var(--mono);font-size:.8rem;color:var(--muted);width:20px}
+.game li .ev{flex:1;min-width:0}
+.game li .yr{font-family:var(--mono);font-size:.85rem;color:var(--green);font-weight:500}
+.game li.ok{border-color:var(--green)}
+.game li.bad{border-color:var(--red)}
+.mv{font:inherit;width:34px;height:34px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;cursor:pointer;font-size:1rem;line-height:1}
+.mv:disabled{opacity:.35;cursor:default}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;align-items:center}
+.btn{font:inherit;font-weight:700;padding:9px 18px;border-radius:8px;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.result{font-weight:500}
+
+/* fuentes */
+.sources{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.sources li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline}
+.sources li span{color:var(--muted);font-size:.95rem;display:block}
+.sources a{font-family:var(--mono);font-size:.82rem;white-space:nowrap}
+@media (max-width:560px){.sources li{grid-template-columns:1fr;gap:4px}}
+/* Santiago 1863 */
+.stg-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;margin-top:32px;align-items:start}
+@media (max-width:860px){.stg-grid{grid-template-columns:1fr}}
+.chrono{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.chrono li{position:relative;padding:0 0 22px 22px}
+.chrono li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--blue)}
+.chrono li.hot::before{background:var(--red);border-color:var(--red)}
+.chrono .d{font-family:var(--mono);font-size:.82rem;color:var(--red);font-weight:500;display:block}
+.chrono b{font-family:var(--display);font-size:1.15rem;display:block;line-height:1.25;margin-top:2px}
+.chrono p{margin:4px 0 0;color:var(--muted);font-size:.98rem}
+.stg-h{font-size:1.5rem;margin-bottom:16px}
+.places{display:grid;gap:14px}
+.place{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--surface)}
+.place h4{font-family:var(--display);font-size:1.2rem;margin:2px 0 6px}
+.place p{margin:6px 0 0;font-size:.98rem}
+.place .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.profile{margin-top:48px;display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+@media (max-width:700px){.profile{grid-template-columns:1fr}}
+.profile aside{background:var(--ink);color:var(--bg);padding:24px;display:flex;flex-direction:column;gap:14px}
+.profile aside .nm{font-family:var(--display);font-size:1.7rem;font-weight:800;line-height:1.1}
+.profile aside dl{margin:0;display:grid;gap:10px}
+.profile aside dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.profile aside dd{margin:0;font-size:.97rem}
+.profile .body{padding:24px 26px;min-width:0}
+.profile .body h3{font-size:1.5rem}
+.profile .body p{margin:10px 0 0}
+.lineage{margin-top:20px;padding:16px 18px;border-radius:8px;background:var(--blue-soft);border-left:3px solid var(--blue)}
+.lineage .lbl{font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.lineage p{margin:6px 0 0}
+.stg-src{margin-top:28px;font-size:.92rem;color:var(--muted);max-width:90ch}
+.stg-src a{word-break:break-word}
+/* Sobre el espacio */
+.meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.meta-grid>div{padding:16px 18px;border-left:1px solid var(--line)}
+.meta-grid>div:first-child{border-left:0}
+.meta-grid dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meta-grid dd{margin:4px 0 0;font-family:var(--display);font-size:1.2rem;font-weight:700;line-height:1.25}
+@media (max-width:700px){.meta-grid{grid-template-columns:1fr}.meta-grid>div{border-left:0;border-top:1px solid var(--line)}.meta-grid>div:first-child{border-top:0}}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:32px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.two h3{font-size:1.3rem;margin-bottom:10px}
+.two ul{margin:0;padding-left:20px}.two li+li{margin-top:6px}
+.route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:36px;counter-reset:r}
+@media (max-width:860px){.route{grid-template-columns:1fr 1fr;gap:14px}}
+@media (max-width:460px){.route{grid-template-columns:1fr}}
+.route a{display:flex;flex-direction:column;gap:6px;padding:18px;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);position:relative}
+@media (min-width:861px){.route a{border-left-width:0}.route a:first-child{border-left-width:1px;border-radius:10px 0 0 10px}.route a:last-child{border-radius:0 10px 10px 0}}
+@media (max-width:860px){.route a{border-radius:10px}}
+.route a:hover{background:var(--blue-soft)}
+.route .step{font-family:var(--mono);font-size:.75rem;color:var(--red);letter-spacing:.08em;text-transform:uppercase}
+.route b{font-family:var(--display);font-size:1.3rem}
+.route span.r{font-size:.93rem;color:var(--muted)}
+.route .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.route .tags i{font-style:normal;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:4px;background:var(--grey-soft)}
+
+/* Simuladores */
+.lab{margin-top:32px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:clamp(16px,3vw,28px)}
+.lab+.lab{margin-top:28px}
+.lab h3{font-size:1.5rem}
+.lab .how-to{color:var(--muted);margin-top:6px;max-width:72ch}
+.map-wrap{margin-top:18px;overflow-x:auto}
+.map-wrap svg{display:block;width:100%;min-width:520px;height:auto}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.steps button{font:inherit;font-family:var(--mono);font-size:.8rem;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.steps button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sim-range{width:100%;margin-top:16px;accent-color:var(--red)}
+.sim-out{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:20px;margin-top:16px;align-items:start}
+@media (max-width:600px){.sim-out{grid-template-columns:1fr;gap:6px}}
+.sim-out .yr{font-family:var(--display);font-size:2rem;font-weight:800;color:var(--red);line-height:1}
+.sim-out h4{font-family:var(--display);font-size:1.25rem;margin:0}
+.sim-out p{margin:6px 0 0}
+.keys{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:.88rem;color:var(--muted)}
+.keys span{display:inline-flex;align-items:center;gap:6px}
+.keys i{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.note-sm{font-size:.85rem;color:var(--muted);margin-top:10px;font-style:italic}
+/* colores de soberanía */
+.z-ind{fill:var(--green-soft);stroke:var(--green)}.k-ind{background:var(--green-soft)}
+.z-esp{fill:var(--gold-soft);stroke:var(--gold)}.k-esp{background:var(--gold-soft)}
+.z-fra{fill:var(--violet-soft);stroke:var(--violet)}.k-fra{background:var(--violet-soft)}
+.z-hai{fill:var(--grey-soft);stroke:var(--muted)}.k-hai{background:var(--grey-soft)}
+.z-rd{fill:var(--red-soft);stroke:var(--red)}.k-rd{background:var(--red-soft)}
+.z-he{fill:var(--blue-soft);stroke:var(--blue)}.k-he{background:var(--blue-soft)}
+.zone{stroke-width:1.2;transition:fill .4s}
+@media (prefers-reduced-motion:reduce){.zone{transition:none}}
+.svg-sea{fill:var(--bg)}
+.svg-txt{fill:var(--ink);font-family:var(--body);font-size:12px}
+.svg-txt.b{font-weight:700;font-size:13px}
+.svg-txt.m{fill:var(--muted);font-size:11px}
+.svg-dot{fill:var(--ink)}
+.border-ref{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-dasharray:4 4}
+.hatch-line{stroke:var(--violet);stroke-width:1.2}
+/* Santiago esquema */
+.river{fill:none;stroke:var(--blue);stroke-width:16;stroke-linecap:round;opacity:.55}
+.city{fill:var(--grey-soft);stroke:var(--line)}
+.blk{fill:var(--surface);stroke:var(--line)}
+.fort{fill:var(--gold-soft);stroke:var(--gold);stroke-width:2}
+.pos{fill:var(--surface);stroke:var(--red);stroke-width:2}
+.pos.on{fill:var(--red)}
+.fire{fill:var(--red);opacity:0;transition:opacity .4s}
+.fire.on{opacity:.28}
+.arrow{fill:none;stroke:var(--ink);stroke-width:2.2;marker-end:url(#ah);opacity:.15;transition:opacity .3s}
+.arrow.on{opacity:1}
+.arrow.esp{stroke:var(--gold)}
+.dim{opacity:.25;transition:opacity .3s}.dim.on{opacity:1}
+
+/* Videos y software */
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+@media (max-width:900px){.vgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.vgrid{grid-template-columns:1fr}}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.vthumb{aspect-ratio:16/9;max-width:100%;background:var(--ink);color:var(--bg);display:flex;flex-direction:column;justify-content:space-between;padding:14px 16px;text-decoration:none;position:relative}
+.vthumb .ep{font-family:var(--mono);font-size:.75rem;opacity:.75}
+.vthumb .play{align-self:center;width:54px;height:54px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.vthumb .play::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vthumb .src{font-size:.82rem;opacity:.8}
+.vframe{aspect-ratio:16/9;width:100%;border:0;display:block}
+.vbody{padding:16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vbody h4{font-family:var(--display);font-size:1.15rem;margin:0;line-height:1.25}
+.vbody p{margin:0;font-size:.95rem;color:var(--muted)}
+.vbody ol{margin:4px 0 0;padding-left:20px;font-size:.95rem}
+.vbody .lbl{font-weight:700;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.sw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:28px;border-top:1px solid var(--line)}
+@media (max-width:700px){.sw{grid-template-columns:1fr}}
+.sw>div{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
+@media (min-width:701px){.sw>div:nth-child(odd){padding-right:24px}.sw>div:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}}
+.sw .ty{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;white-space:nowrap}
+.sw .ty.in{background:var(--red-soft);color:var(--red)}.sw .ty.ex{background:var(--blue-soft);color:var(--blue)}
+.sw b{font-family:var(--display);font-size:1.1rem}
+.sw p{margin:2px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* Evaluación */
+.quiz{margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.q legend{font-weight:700;font-size:1.05rem;padding:0;line-height:1.4}
+.q legend .qn{font-family:var(--mono);font-size:.8rem;color:var(--red);margin-right:8px}
+.q fieldset{border:0;margin:0;padding:0;min-width:0}
+.opts{display:grid;gap:8px;margin-top:12px}
+.opts label{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer;background:var(--bg)}
+.opts label:hover{border-color:var(--blue)}
+.opts input{margin-top:4px;accent-color:var(--blue)}
+.opts label.ok{border-color:var(--green);background:var(--green-soft)}
+.opts label.bad{border-color:var(--red);background:var(--red-soft)}
+.fb{margin-top:10px;font-size:.95rem}
+.fb b{color:var(--green)}.fb.no b{color:var(--red)}
+.score{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:20px;padding:18px 20px;border-radius:10px;background:var(--ink);color:var(--bg)}
+.score .num{font-family:var(--display);font-size:2.2rem;font-weight:800}
+.score .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.score .btn.ghost{background:transparent;color:var(--bg);border-color:var(--bg)}
+.rubric{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.rubric table{min-width:760px}
+.rubric td:first-child{font-weight:700;width:18%}
+.self{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.self label{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);cursor:pointer}
+.self input{margin-top:5px;accent-color:var(--green)}
+.subh{font-size:1.5rem;margin-top:48px}
+footer{padding-block:36px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Historia <span>RD</span></a>
+    <nav aria-label="Secciones">
+      <a href="#linea">Línea de tiempo</a>
+      <a href="#santiago-1863">Santiago 1863</a>
+      <a href="#laboratorio">Simuladores</a>
+      <a href="#videos">Videos</a>
+      <a href="#presidentes">Presidentes</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#evaluacion">Evaluación</a>
+      <a href="#fuentes">Fuentes</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="wrap hero">
+    <div class="eyebrow">Espacio web educativo · Ciencias Sociales · Nivel Secundario</div>
+    <h1>Historia de la <em>República Dominicana</em></h1>
+    <div class="sub">De Caonabo a nuestros días: identidad, soberanía y construcción nacional</div>
+    <div class="read">
+      <p>Una historia de resistencia, diversidad, libertad y compromiso con la patria. La historia dominicana es el resultado de siglos de encuentros culturales, resistencia indígena, colonización, presencia africana, luchas por la soberanía, construcción institucional y participación ciudadana. Conocerla permite comprender nuestras raíces y asumir con responsabilidad el futuro de la nación.</p>
+      <p>Esta línea de tiempo presenta acontecimientos, personajes y procesos que contribuyeron a formar la sociedad dominicana. Su propósito es promover el conocimiento histórico, el pensamiento crítico, el respeto a los hechos documentados y el amor consciente por la República Dominicana.</p>
+    </div>
+    <div class="flag-rule" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <div class="eras" aria-label="Grandes etapas">
+      <a class="era" href="#cap-1"><span class="yrs">Antes de 1492 – 1777</span><b>Raíces indígenas y colonización</b><small>Primeros habitantes, Colón, Caonabo, Enriquillo y los tratados coloniales.</small></a>
+      <a class="era" href="#cap-3"><span class="yrs">1791 – 1865</span><b>Independencia y Restauración</b><small>La Trinitaria, el 27 de Febrero, las batallas de 1844 y la Restauración.</small></a>
+      <a class="era" href="#cap-5"><span class="yrs">1865 – 2000</span><b>Estado, dictadura y democracia</b><small>Caudillismo, ocupación, Trujillo, Revolución de Abril y alternancia.</small></a>
+      <a class="era" href="#cap-8"><span class="yrs">2000 – 2025</span><b>República contemporánea</b><small>Educación, economía, infraestructura, ciudadanía y retos nacionales.</small></a>
+    </div>
+
+    <div class="how" aria-label="Cómo recorrer la línea de tiempo">
+      <div><b>Fecha</b><span>Cuándo ocurrió el acontecimiento.</span></div>
+      <div><b>¿Qué sucedió?</b><span>Explicación histórica.</span></div>
+      <div><b>Protagonistas</b><span>Personas o grupos relacionados con el hecho.</span></div>
+      <div><b>¿Por qué es importante?</b><span>Su significado para comprender nuestra historia.</span></div>
+    </div>
+  </div>
+
+  <section class="block" id="espacio">
+    <div class="wrap">
+      <div class="eyebrow">Sobre este espacio</div>
+      <h2>Un aula abierta para estudiar la historia dominicana</h2>
+      <p class="lead">Este espacio web reúne textos, ilustraciones, videos, simuladores, software educativo y actividades de evaluación para que el estudiantado comprenda la formación de la nación dominicana a partir de fuentes y hechos documentados.</p>
+      <dl class="meta-grid">
+        <div><dt>Área curricular</dt><dd>Ciencias Sociales: Historia dominicana</dd></div>
+        <div><dt>Nivel educativo</dt><dd>Nivel Secundario</dd></div>
+        <div><dt>Modalidad de uso</dt><dd>Presencial, a distancia o mixta, en computadora o celular</dd></div>
+      </dl>
+      <div class="two">
+        <div>
+          <h3>Competencias fundamentales</h3>
+          <ul>
+            <li><b>Ética y Ciudadana:</b> valorar la soberanía, los derechos humanos y la participación ciudadana a partir del pasado.</li>
+            <li><b>Pensamiento Lógico, Creativo y Crítico:</b> distinguir hechos documentados de interpretaciones y contrastar fuentes.</li>
+            <li><b>Comunicativa:</b> explicar procesos históricos de forma oral y escrita con vocabulario preciso.</li>
+            <li><b>Científica y Tecnológica:</b> usar recursos digitales para investigar, organizar y presentar información histórica.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Propósitos de aprendizaje</h3>
+          <ul>
+            <li>Ubicar en el tiempo los principales procesos de la historia dominicana, desde los pueblos originarios hasta la actualidad.</li>
+            <li>Explicar cómo cambió la soberanía sobre la isla y distinguir ocupación, reconocimiento diplomático y frontera.</li>
+            <li>Analizar la Guerra de la Restauración a partir de un caso local: Santiago de los Caballeros en 1863.</li>
+            <li>Evaluar la información con criterios de evidencia, citando fuentes primarias y secundarias.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="route" aria-label="Ruta de aprendizaje">
+        <a href="#linea"><span class="step">Paso 1 · Explora</span><b>Lee y ubica</b><span class="r">Recorre la línea de tiempo y la sección especial de Santiago 1863.</span><span class="tags"><i>Textos</i><i>Ilustraciones</i></span></a>
+        <a href="#videos"><span class="step">Paso 2 · Observa</span><b>Mira y anota</b><span class="r">Observa los videos con su guía de preguntas.</span><span class="tags"><i>Videos</i></span></a>
+        <a href="#laboratorio"><span class="step">Paso 3 · Experimenta</span><b>Simula y compara</b><span class="r">Usa los simuladores y el software educativo para ver los cambios en el mapa.</span><span class="tags"><i>Simuladores</i><i>Software</i></span></a>
+        <a href="#evaluacion"><span class="step">Paso 4 · Demuestra</span><b>Evalúa lo aprendido</b><span class="r">Responde el cuestionario, realiza una actividad y valórate con la rúbrica.</span><span class="tags"><i>Evaluación</i></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="linea">
+    <div class="wrap">
+      <div class="eyebrow">53 fichas · 8 capítulos</div>
+      <h2>Línea de tiempo</h2>
+      <p class="lead">Recorre la historia capítulo por capítulo, o busca un nombre, un lugar o un año. Los puntos rojos marcan fechas fundacionales de la memoria nacional.</p>
+
+      <div class="tools">
+        <label class="search" for="q"><span class="eyebrow" style="position:absolute;left:-9999px">Buscar</span>
+          <input id="q" type="search" placeholder="Buscar: Duarte, Ryswick, 1844, Mirabal…" autocomplete="off">
+        </label>
+        <select id="capSel" aria-label="Filtrar por capítulo"><option value="">Todos los capítulos</option></select>
+        <span class="count" id="count"></span>
+      </div>
+
+      <div id="timeline"></div>
+      <p class="empty" id="empty" hidden>No hay fichas que coincidan con la búsqueda. Prueba con otro nombre o año.</p>
+
+      <div class="closing">
+        <div class="eyebrow" style="color:inherit;opacity:.7">Ficha final</div>
+        <h3>El presente y el futuro de la República Dominicana</h3>
+        <p>La historia nacional no es solamente una sucesión de guerras, tratados y gobiernos. También es la historia de las familias, las comunidades, los educadores, los trabajadores, los artistas, los científicos y los ciudadanos que contribuyen diariamente al país.</p>
+        <p>Conocer el pasado permite comprender los desafíos del presente y tomar mejores decisiones para el futuro.</p>
+        <blockquote>La República Dominicana no es solamente una herencia que recibimos: es una responsabilidad que compartimos. Honrar la patria significa conocer su historia, cuidar sus instituciones, defender la dignidad humana y trabajar por una nación más justa, educada, solidaria y libre.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="santiago-1863">
+    <div class="wrap">
+      <div class="eyebrow">Sección especial · Guerra de la Restauración</div>
+      <h2>Santiago de los Caballeros, septiembre de 1863</h2>
+      <p class="lead">Tres semanas después del Grito de Capotillo, las fuerzas restauradoras sitiaron Santiago, donde las tropas españolas resistían en la Fortaleza San Luis. Entre el 6 y el 13 de septiembre de 1863, la ciudad fue escenario de combates, de un incendio que la redujo a cenizas y de la retirada española hacia Puerto Plata. Al día siguiente se firmó en Santiago el Acta de Independencia que dio origen al Gobierno restaurador.</p>
+
+      <div class="stg-grid">
+        <div>
+          <h3 class="stg-h">Cronología de la batalla</h3>
+          <ol class="chrono">
+            <li><span class="d">16 de agosto de 1863</span><b>Grito de Capotillo</b><p>Comienza en la Línea Noroeste el levantamiento que se extiende rápidamente por el Cibao.</p></li>
+            <li><span class="d">31 de agosto</span><b>Polanco marcha hacia Santiago</b><p>El general Gaspar Polanco sale de Quinigua con unos 6,000 hombres. El 1 de septiembre llega a Santiago el coronel José Antonio Salcedo (Pepillo).</p></li>
+            <li><span class="d">Primeros días de septiembre</span><b>Los españoles se repliegan</b><p>Tras el combate de Gurabito, las tropas españolas al mando del brigadier Manuel Buceta se refugian en la Fortaleza San Luis, el Castillo y la Cárcel Vieja. Los restauradores organizan cantones alrededor de la ciudad.</p></li>
+            <li class="hot"><span class="d">6 de septiembre</span><b>Batalla de Santiago e incendio de la ciudad</b><p>Los restauradores atacan la Fortaleza San Luis bajo fuego de fusilería y artillería. El general José María Checo comanda el cantón de La Otra Banda. Polanco ordena incendiar la ciudad para que dejara de servir de refugio a las tropas españolas. Muere el general Gregorio de Lora.</p></li>
+            <li><span class="d">12 de septiembre</span><b>Victorias en los alrededores</b><p>Los restauradores vencen en Jácuba, La Otra Banda y Marilópez, y cortan el auxilio enviado desde Puerto Plata.</p></li>
+            <li class="hot"><span class="d">13 de septiembre</span><b>Retirada española</b><p>A las tres de la tarde, las tropas españolas abandonan Santiago rumbo a Puerto Plata. Hostigadas por las guerrillas durante la marcha, sufren más de mil bajas.</p></li>
+            <li><span class="d">14 de septiembre</span><b>Acta de Independencia</b><p>En Santiago se firma el Acta de Independencia y se instala el Gobierno provisional restaurador, presidido por José Antonio Salcedo.</p></li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="stg-h">Los escenarios</h3>
+          <div class="places">
+            <div class="place"><span class="k">Bastión restaurador</span><h4>La Otra Banda</h4><p>Barrio situado en la margen opuesta del río Yaque del Norte, frente a la ciudad. Desde allí, el cantón dirigido por José María Checo dominaba el paso del río y presionaba a las tropas españolas. En los combates del 12 de septiembre fue uno de los puntos de la victoria restauradora.</p></div>
+            <div class="place"><span class="k">Último refugio español</span><h4>Fortaleza San Luis</h4><p>Durante el asedio, la guarnición española resistió en ella y bombardeó desde allí las posiciones restauradoras. Las construcciones de madera y yagua que la rodeaban ardieron el 6 de septiembre. La forma actual de fortaleza, con muros y torre, data de 1895. Hoy es museo y conserva un busto del general Gaspar Polanco.</p></div>
+            <div class="place"><span class="k">6 de septiembre de 1863</span><h4>El fuego de Santiago</h4><p>Por orden secreta de Polanco, Juan Burgos, de Licey, prendió fuego a una casa de la calle del Vidrio, la actual calle Mella, cerca de la fortaleza. Un fuerte viento del este propagó las llamas y la ciudad quedó en cenizas. Sin casas ni abastecimiento, la plaza perdió su valor para los españoles, que se vieron obligados a retirarse.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <article class="profile" id="jose-maria-checo">
+        <aside>
+          <div class="eyebrow" style="color:inherit;opacity:.7">General restaurador</div>
+          <div class="nm">José María Checo</div>
+          <dl>
+            <div><dt>Nacimiento</dt><dd>3 de marzo de 1814, San José de las Matas</dd></div>
+            <div><dt>Muerte</dt><dd>12 de agosto de 1894, San José de las Matas</dd></div>
+            <div><dt>En 1863</dt><dd>Comandante del cantón de La Otra Banda en la batalla de Santiago</dd></div>
+          </dl>
+        </aside>
+        <div class="body">
+          <h3>Del soldado raso de 1844 al general de la Restauración</h3>
+          <p>Hijo de Carlos Checo García y Manuela Jáquez Rodríguez, José María Checo se enlistó como soldado raso en 1844, reclutado por Ramón Matías Mella. Participó en las campañas de la Guerra de Independencia entre 1844 y 1856 y en la revolución de 1857.</p>
+          <p>Durante la Anexión a España sirvió inicialmente en las reservas del ejército español. Luego desertó de esas filas, por lo que fue procesado por las autoridades españolas, y se unió a los patriotas restauradores. Ascendido a general, el 6 de septiembre de 1863 tuvo a su cargo el cantón de La Otra Banda, una de las posiciones que cercaron Santiago durante la batalla que obligó a los españoles a abandonar la ciudad.</p>
+          <p>Tras la guerra regresó a San José de las Matas, donde fue jefe de la Comandancia de Armas y uno de los fundadores de la asociación patriótica Liga de la Paz. Su descendencia se extendió por las familias del Cibao.</p>
+          <div class="lineage">
+            <div class="lbl">Memoria familiar</div>
+            <p>Según la tradición de su familia, el general José María Checo es tatarabuelo de la señora Soraya Checo de Álvarez, presidenta de la Fundación Ciudad Santa María, con sede en La Otra Banda de Santiago, el mismo sector donde su antepasado comandó las fuerzas restauradoras en 1863.</p>
+          </div>
+        </div>
+      </article>
+
+      <p class="stg-src"><b>Fuentes:</b> Mario Julio Jáquez Torres, «El Restaurador José María Checo», Instituto Dominicano de Genealogía (publicado en el diario <i>Hoy</i>, 25 de junio de 2011), <a href="https://www.idg.org.do/capsulas/junio2011/junio201125.htm" target="_blank" rel="noopener">idg.org.do</a>. Carlos Checo Estrella, «La batalla de Santiago del 6 de septiembre de 1863», <i>El Nuevo Diario</i>. «En la Guerra Restauradora incendiaron Santiago», <i>Acento</i>, basado en Pedro María Archambault y Juan Bosch. «La batalla del 6 de septiembre de 1863», <i>El Caribe</i>. «El fuerte sirvió de cárcel, escuela y hospital», <i>El Caribe</i>.</p>
+    </div>
+  </section>
+
+  <section class="block" id="laboratorio">
+    <div class="wrap">
+      <div class="eyebrow">Paso 3 · Experimenta</div>
+      <h2>Simuladores</h2>
+      <p class="lead">Dos simuladores permiten ver cómo cambian los hechos en el espacio. Los mapas son ilustraciones esquemáticas, creadas para este sitio con fines didácticos: no están a escala y no reproducen fronteras históricas exactas.</p>
+
+      <div class="lab" id="sim-isla">
+        <div class="eyebrow">Simulador 1</div>
+        <h3>La isla en el tiempo</h3>
+        <p class="how-to">Mueve el control o elige un año para ver quién ejercía el dominio sobre cada parte de la isla. Observa cuándo la isla estuvo bajo un solo poder y cuándo estuvo dividida.</p>
+        <div class="map-wrap" id="islaMap" role="img" aria-label="Mapa esquemático de la isla de Santo Domingo coloreado según el poder que la dominaba en el año elegido"></div>
+        <label for="islaRange" style="position:absolute;left:-9999px">Elegir momento histórico</label>
+        <input type="range" id="islaRange" class="sim-range" min="0" max="11" step="1" value="0">
+        <div class="steps" id="islaSteps"></div>
+        <div class="sim-out" aria-live="polite"><div class="yr" id="islaYr"></div><div><h4 id="islaT"></h4><p id="islaP"></p></div></div>
+        <div class="keys">
+          <span><i class="k-ind"></i>Pueblos indígenas</span><span><i class="k-esp"></i>España</span><span><i class="k-fra"></i>Francia</span><span><i class="k-hai"></i>Haití</span><span><i class="k-he"></i>Haití Español (1821–1822)</span><span><i class="k-rd"></i>República Dominicana</span>
+        </div>
+        <p class="note-sm">La línea punteada marca la frontera actual solo como referencia de ubicación. La frontera de 1777 seguía otro trazado en varios tramos.</p>
+      </div>
+
+      <div class="lab" id="sim-santiago">
+        <div class="eyebrow">Simulador 2</div>
+        <h3>El asedio de Santiago, paso a paso</h3>
+        <p class="how-to">Avanza por las fechas para seguir los movimientos de la batalla de Santiago de 1863. Los puntos rojos son posiciones restauradoras; las flechas, desplazamientos de tropas.</p>
+        <div class="map-wrap">
+          <svg viewBox="0 0 640 400" id="stgMap" role="img" aria-label="Esquema ilustrativo de Santiago en septiembre de 1863">
+            <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--ink)"/></marker></defs>
+            <rect x="0" y="0" width="640" height="400" class="svg-sea"/>
+            <path class="city" d="M300 95 L560 80 L585 230 L470 262 L350 262 L290 220 Z"/>
+            <g>
+              <rect class="blk" x="320" y="110" width="40" height="28"/><rect class="blk" x="368" y="108" width="40" height="28"/><rect class="blk" x="416" y="106" width="40" height="28"/><rect class="blk" x="464" y="104" width="40" height="28"/><rect class="blk" x="512" y="102" width="36" height="28"/>
+              <rect class="blk" x="320" y="146" width="40" height="28"/><rect class="blk" x="368" y="144" width="40" height="28"/><rect class="blk" x="416" y="142" width="40" height="28"/><rect class="blk" x="464" y="140" width="40" height="28"/><rect class="blk" x="512" y="138" width="40" height="28"/>
+              <rect class="blk" x="330" y="182" width="40" height="28"/><rect class="blk" x="378" y="180" width="40" height="28"/><rect class="blk" x="426" y="178" width="40" height="28"/><rect class="blk" x="474" y="176" width="40" height="28"/><rect class="blk" x="522" y="174" width="40" height="28"/>
+            </g>
+            <ellipse class="fire" data-on="3,4,5,6" cx="430" cy="170" rx="150" ry="85"/>
+            <path class="river" d="M-10 300 C 140 340, 250 255, 380 282 S 560 330, 650 255"/>
+            <text class="svg-txt m" x="560" y="318">río Yaque del Norte</text>
+            <rect class="fort" x="352" y="228" width="30" height="24" rx="2"/>
+            <text class="svg-txt b" x="300" y="222">Fortaleza San Luis</text>
+            <rect class="fort" x="548" y="86" width="18" height="16" rx="2"/>
+            <text class="svg-txt m" x="520" y="76">El Castillo</text>
+            <rect class="fort" x="436" y="214" width="16" height="14" rx="2"/>
+            <text class="svg-txt m" x="458" y="226">Cárcel Vieja</text>
+            <text class="svg-txt b" x="410" y="60">Santiago</text>
+
+            <text class="svg-txt b" x="230" y="372">La Otra Banda</text>
+            <circle class="pos dim" data-on="3,4,5,6" cx="330" cy="335" r="9"/>
+            <text class="svg-txt m dim" data-on="3,4,5,6" x="344" y="340">cantón de José María Checo</text>
+
+            <circle class="pos dim" data-on="0,1,2,3,4,5,6" cx="60" cy="70" r="7"/>
+            <text class="svg-txt" x="20" y="54">Quinigua</text>
+            <path class="arrow" data-on="0" d="M72 80 C 160 110, 220 130, 285 150"/>
+            <path class="arrow" data-on="1" d="M120 210 C 190 200, 240 190, 288 182"/>
+            <text class="svg-txt m dim" data-on="1" x="80" y="232">llegada de Salcedo</text>
+
+            <circle class="pos dim" data-on="2,3,4,5,6" cx="250" cy="70" r="7"/>
+            <text class="svg-txt" x="214" y="56">Gurabito</text>
+            <circle class="pos dim" data-on="3,4,5,6" cx="290" cy="120" r="7"/>
+            <circle class="pos dim" data-on="3,4,5,6" cx="600" cy="170" r="7"/>
+            <circle class="pos dim" data-on="3,4,5,6" cx="430" cy="290" r="7"/>
+
+            <circle class="pos dim" data-on="4,5,6" cx="470" cy="22" r="7"/>
+            <text class="svg-txt" x="484" y="27">Jácuba (camino a Puerto Plata)</text>
+            <circle class="pos dim" data-on="4,5,6" cx="70" cy="300" r="7"/>
+            <text class="svg-txt" x="40" y="285">Marilópez</text>
+
+            <path class="arrow esp" data-on="5" d="M440 110 C 450 80, 455 55, 462 34"/>
+            <text class="svg-txt m dim" data-on="5" x="330" y="40">retirada española</text>
+            <text class="svg-txt b dim" data-on="6" x="380" y="130" style="font-size:14px">Acta de Independencia</text>
+          </svg>
+        </div>
+        <div class="steps" id="stgSteps"></div>
+        <div class="sim-out" aria-live="polite"><div class="yr" id="stgYr" style="font-size:1.4rem"></div><div><h4 id="stgT"></h4><p id="stgP"></p></div></div>
+        <div class="btns"><button class="btn ghost" type="button" id="stgPrev">Anterior</button><button class="btn" type="button" id="stgNext">Siguiente</button></div>
+        <p class="note-sm">Esquema ilustrativo: las posiciones son aproximadas y sirven para comprender el cerco, no para ubicar lugares exactos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="videos">
+    <div class="wrap">
+      <div class="eyebrow">Paso 2 · Observa</div>
+      <h2>Videoteca</h2>
+      <p class="lead">Episodios de la serie educativa de historia dominicana de la Fundación Corripio. Mira cada video con su guía y anota tus respuestas antes de pasar a la evaluación.</p>
+      <div class="vgrid" id="vgrid"></div>
+    </div>
+  </section>
+
+  <section class="block" id="software">
+    <div class="wrap">
+      <div class="eyebrow">Paso 3 · Experimenta</div>
+      <h2>Software educativo</h2>
+      <p class="lead">Herramientas integradas en este espacio y aplicaciones externas gratuitas para investigar, crear y practicar.</p>
+      <div class="sw">
+        <div><span class="ty in">En este sitio</span><div><b><a href="#sim-isla">Simulador «La isla en el tiempo»</a></b><p>Mapa interactivo de la soberanía sobre la isla entre 1492 y 1865.</p></div></div>
+        <div><span class="ty in">En este sitio</span><div><b><a href="#sim-santiago">Simulador del asedio de Santiago</a></b><p>Recorrido paso a paso por la batalla de septiembre de 1863.</p></div></div>
+        <div><span class="ty in">En este sitio</span><div><b><a href="#juego">Juego «¿Qué ocurrió primero?»</a></b><p>Ordena acontecimientos y recibe corrección inmediata.</p></div></div>
+        <div><span class="ty in">En este sitio</span><div><b><a href="#evaluacion">Cuestionario autocorregido</a></b><p>Diez preguntas con retroalimentación y calificación final.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://earth.google.com/web/" target="_blank" rel="noopener">Google Earth</a></b><p>Busca «Fortaleza San Luis, Santiago» y recorre el río Yaque y La Otra Banda en vista satelital.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://timeline.knightlab.com" target="_blank" rel="noopener">TimelineJS</a></b><p>Crea tu propia línea de tiempo multimedia a partir de una hoja de cálculo.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://www.educaplay.com" target="_blank" rel="noopener">Educaplay</a></b><p>Diseña crucigramas, sopas de letras y mapas interactivos sobre la Restauración.</p></div></div>
+        <div><span class="ty ex">Externo</span><div><b><a href="https://www.educando.edu.do" target="_blank" rel="noopener">Educando (MINERD)</a></b><p>Portal educativo del Ministerio de Educación con recursos para el Nivel Secundario.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="presidentes">
+    <div class="wrap">
+      <div class="eyebrow">Sección especial · Poder Ejecutivo desde 1844</div>
+      <h2>Presidentes y gobernantes</h2>
+      <p class="lead">Cada fila identifica al gobernante, el inicio y el final de su mandato, si fue interino y bajo qué condición ejerció. La distinción importa: la historia dominicana incluye gobiernos provisionales, juntas, triunviratos, autoridades rivales y períodos de ocupación extranjera.</p>
+
+      <div class="current"><span class="eyebrow">Presidente en ejercicio · octubre de 2026</span><b>Luis Abinader</b><span>Mandato constitucional 2024–2028</span></div>
+
+      <div class="legend" id="legend" role="group" aria-label="Filtrar por condición"></div>
+      <div class="tools" style="position:static;border:0;padding:0;margin-top:14px">
+        <label class="search" for="pq"><span style="position:absolute;left:-9999px">Buscar gobernante</span>
+          <input id="pq" type="search" placeholder="Buscar gobernante…" autocomplete="off">
+        </label>
+        <span class="count" id="pcount"></span>
+      </div>
+
+      <p class="warn"><b>Criterio de lectura.</b> En los períodos de crisis, las fechas de inicio y término pueden variar según se considere el gobierno constitucional, provisional o rival, y algunas aparecen registradas de forma distinta en las cronologías históricas. Antes de usar esta tabla como sucesión exhaustiva, conviene contrastar cada fecha con las publicaciones del Archivo General de la Nación, entre ellas <i>Presidentes de la República Dominicana (1844–1996)</i> y <i>Presidentes, juntas, consejos, triunviratos y gabinetes de la República Dominicana, 1844–1984</i>.</p>
+
+      <div id="periods"></div>
+    </div>
+  </section>
+
+  <section class="block" id="actividades">
+    <div class="wrap">
+      <div class="eyebrow">Para el aula</div>
+      <h2>Actividades para estudiantes</h2>
+      <div class="acts">
+        <article class="act"><div class="fn">Actividad 1</div><h3>Detectives de la historia</h3><p>Selecciona una afirmación histórica, busca una fuente primaria y una fuente secundaria, y explica qué evidencia respalda cada una.</p></article>
+        <article class="act"><div class="fn">Actividad 2</div><h3>Ordena la línea de tiempo</h3><p>Organiza las tarjetas desde los primeros habitantes hasta 2025. Identifica cuáles acontecimientos ocurrieron simultáneamente en distintas partes de la isla o del mundo. Practica abajo con el juego de orden.</p></article>
+        <article class="act"><div class="fn">Actividad 3</div><h3>¿Qué dice realmente el tratado?</h3><p>Compara el texto del Tratado de Ryswick con el de Aranjuez. Responde:</p>
+          <ul><li>¿Cuál era el contexto de cada tratado?</li><li>¿Qué territorios o asuntos menciona expresamente cada documento?</li><li>¿Qué diferencia existe entre ocupar un territorio, obtener reconocimiento diplomático y establecer una frontera?</li><li>¿Qué afirmaciones podemos sostener con el documento y cuáles necesitan otras fuentes?</li></ul></article>
+        <article class="act"><div class="fn">Actividad 4</div><h3>Historia y ciudadanía</h3><p>Elige un acontecimiento de la historia dominicana y explica qué lecciones ofrece para la democracia, los derechos humanos, la soberanía y la responsabilidad ciudadana actual.</p></article>
+      </div>
+
+      <div class="game" id="juego">
+        <div class="eyebrow">Práctica</div>
+        <h3>¿Qué ocurrió primero?</h3>
+        <p class="lead" style="margin-top:6px">Ordena estos seis acontecimientos del más antiguo al más reciente con las flechas y pulsa «Comprobar».</p>
+        <ol id="gameList"></ol>
+        <div class="btns">
+          <button class="btn" id="check" type="button">Comprobar</button>
+          <button class="btn ghost" id="shuffle" type="button">Nueva ronda</button>
+          <span class="result" id="result" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="evaluacion">
+    <div class="wrap">
+      <div class="eyebrow">Paso 4 · Demuestra</div>
+      <h2>Evaluación</h2>
+      <p class="lead">Tres momentos de evaluación: un cuestionario autocorregido (evaluación formativa), una rúbrica para las actividades (heteroevaluación y coevaluación) y una lista de autoevaluación.</p>
+
+      <h3 class="subh">Cuestionario</h3>
+      <p class="lead">Elige una respuesta en cada pregunta. Verás la explicación al instante y tu calificación al final.</p>
+      <form id="quiz" class="quiz"></form>
+      <div class="score" id="score" aria-live="polite">
+        <span class="num" id="scoreNum">0 / 10</span>
+        <span id="scoreMsg">Responde las preguntas para ver tu resultado.</span>
+        <button class="btn ghost" type="button" id="quizReset">Reiniciar</button>
+      </div>
+
+      <h3 class="subh">Rúbrica para las actividades</h3>
+      <p class="lead">Úsala para valorar las Actividades 1 a 4. Cada criterio vale de 1 a 4 puntos; el máximo es 16.</p>
+      <div class="rubric">
+        <table>
+          <thead><tr><th>Criterio</th><th>Excelente (4)</th><th>Bueno (3)</th><th>En proceso (2)</th><th>Inicial (1)</th></tr></thead>
+          <tbody>
+            <tr><td>Uso de fuentes</td><td>Cita al menos una fuente primaria y una secundaria, y explica qué aporta cada una.</td><td>Cita dos fuentes, pero explica solo una.</td><td>Cita una sola fuente.</td><td>No cita fuentes.</td></tr>
+            <tr><td>Precisión histórica</td><td>Fechas, lugares y protagonistas correctos y bien relacionados.</td><td>Datos correctos con algún error menor.</td><td>Varios errores en fechas o protagonistas.</td><td>La información no corresponde al hecho estudiado.</td></tr>
+            <tr><td>Pensamiento crítico</td><td>Distingue hechos de interpretaciones y explica causas y consecuencias.</td><td>Explica causas o consecuencias, pero no ambas.</td><td>Describe el hecho sin analizarlo.</td><td>Repite el texto sin elaboración propia.</td></tr>
+            <tr><td>Comunicación</td><td>Texto claro, ordenado y con vocabulario histórico adecuado.</td><td>Texto claro con pocas imprecisiones.</td><td>Ideas desordenadas o incompletas.</td><td>El mensaje no se comprende.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subh">Autoevaluación</h3>
+      <p class="lead">Marca lo que ya puedes hacer. Lo que quede sin marcar te indica qué repasar.</p>
+      <ul class="self">
+        <li><label for="s1"><input type="checkbox" id="s1">Puedo ordenar en el tiempo los grandes procesos de la historia dominicana.</label></li>
+        <li><label for="s2"><input type="checkbox" id="s2">Puedo explicar la diferencia entre los tratados de Ryswick, Aranjuez y Basilea.</label></li>
+        <li><label for="s3"><input type="checkbox" id="s3">Puedo narrar qué ocurrió en Santiago entre el 6 y el 14 de septiembre de 1863.</label></li>
+        <li><label for="s4"><input type="checkbox" id="s4">Puedo distinguir un presidente constitucional de uno provisional o de facto.</label></li>
+        <li><label for="s5"><input type="checkbox" id="s5">Puedo encontrar y citar una fuente confiable para comprobar un dato histórico.</label></li>
+      </ul>
+      <p class="note-sm" id="selfMsg"></p>
+    </div>
+  </section>
+
+  <section class="block" id="fuentes">
+    <div class="wrap">
+      <div class="eyebrow">Para verificar y profundizar</div>
+      <h2>Fuentes de consulta</h2>
+      <ul class="sources">
+        <li><div>Archivo General de la Nación<span>Portal oficial, catálogo de colecciones digitales, expedientes sobre los límites de 1777 y las obras <i>Presidentes de la República Dominicana (1844–1996)</i> y <i>Presidentes, juntas, consejos, triunviratos y gabinetes, 1844–1984</i>.</span></div><a href="https://agn.gob.do" target="_blank" rel="noopener">agn.gob.do</a></li>
+        <li><div>Academia Dominicana de la Historia<span>Revista <i>Clío</i> y catálogo digital de publicaciones históricas.</span></div><a href="https://academiadominicanahistoria.org.do" target="_blank" rel="noopener">academiadominicanahistoria.org.do</a></li>
+        <li><div>François Blancpain, «Les droits de la France sur la colonie de Saint-Domingue et le traité de Ryswick»<span>Outre-Mers, t. 94, n.º 354-355, 2007, pp. 305–329.</span></div><a href="https://www.persee.fr/doc/outre_1631-0438_2007_num_94_354_4266" target="_blank" rel="noopener">persee.fr</a></li>
+        <li><div>Foreign Relations of the United States, 1922, vol. II<span>Documentos diplomáticos sobre el Plan Hughes-Peynado y el gobierno provisional de 1922.</span></div><a href="https://history.state.gov/historicaldocuments/frus1922v02" target="_blank" rel="noopener">history.state.gov</a></li>
+        <li><div>Junta Central Electoral<span>Resultados oficiales de las elecciones de 2024.</span></div><a href="https://jce.gob.do" target="_blank" rel="noopener">jce.gob.do</a></li>
+        <li><div>Presidencia de la República Dominicana<span>Portal oficial del Poder Ejecutivo.</span></div><a href="https://presidencia.gob.do" target="_blank" rel="noopener">presidencia.gob.do</a></li>
+        <li><div>Naciones Unidas en República Dominicana<span>Información y publicaciones sobre el país.</span></div><a href="https://dominicanrepublic.un.org" target="_blank" rel="noopener">dominicanrepublic.un.org</a></li>
+      </ul>
+      <p class="warn"><b>Revisión histórica.</b> El contenido fue contrastado con fuentes en octubre de 2026: se corrigieron fechas, se añadieron las juntas, consejos y gobiernos provisionales que faltaban en la cronología presidencial y se precisaron varias fichas. Las fechas de los períodos de crisis pueden variar según la cronología consultada. Las fichas de 2025 deben acompañarse de referencias específicas cuando se incorporen cifras, anuncios oficiales o resultados de políticas públicas.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Historia de la República Dominicana · Espacio web educativo para el Nivel Secundario, área de Ciencias Sociales · Elaborado por Arleni Hernández Rodríguez, Escuela de Postgrado, UAPA · Contenido revisado el 12 de octubre de 2026</div>
+</footer>
+
+<script>
+const CAPS = [
+  "Los primeros habitantes y el inicio de la colonización",
+  "Colonización, resistencia y configuración territorial",
+  "Camino hacia la independencia",
+  "Primera República, anexión y Restauración",
+  "Caudillismo, modernización y ocupaciones extranjeras",
+  "Dictadura, resistencia y recuperación de la libertad",
+  "Democracia, crisis política y transformación social",
+  "República Dominicana en el siglo XXI"
+];
+// c: capítulo, f: fecha, t: título, q: qué sucedió (párrafos), p: protagonistas, w: por qué es importante, x: recuadro, s: fuente, k: fecha clave
+const F = [
+ {c:1,f:"Antes de 1492",t:"Los primeros habitantes de la isla",q:["Mucho antes de la llegada de los europeos, la isla que hoy comparten la República Dominicana y Haití estaba habitada por diversos pueblos indígenas. Entre ellos se encontraban comunidades de tradición arahuaca, especialmente los taínos, junto con otros grupos y comunidades regionales. Desarrollaron conocimientos agrícolas, técnicas de pesca, navegación, cerámica, organización comunitaria y expresiones espirituales propias."],p:"Comunidades indígenas de la isla, entre ellas los taínos.",w:"La historia de la isla no comienza con la llegada europea. Sus primeros habitantes construyeron sociedades con conocimientos, tradiciones y formas de organización que forman parte de nuestro patrimonio histórico."},
+ {c:1,f:"1492",t:"Llegada de Cristóbal Colón",q:["En diciembre de 1492, la expedición de Cristóbal Colón llegó a la isla durante el primer viaje europeo de exploración que abrió paso a la colonización española del Caribe. Los europeos la denominaron La Española."],p:"Cristóbal Colón y los pueblos indígenas de la isla.",w:"Este acontecimiento inició una etapa de transformación profunda: colonización, evangelización, explotación de recursos, epidemias, violencia y cambios demográficos y culturales que afectaron gravemente a las poblaciones indígenas."},
+ {c:1,f:"1493–1496",t:"Resistencia de Caonabo",q:["Caonabo, uno de los principales líderes indígenas de la isla, encabezó una resistencia frente al avance colonial español. Su oposición estuvo vinculada a la defensa del territorio, la autonomía de las comunidades indígenas y el rechazo a los abusos de los colonizadores."],p:"Caonabo, Anacaona y las comunidades indígenas enfrentadas a la colonización.",w:"Caonabo representa la resistencia temprana frente a la imposición colonial. Su historia recuerda que los pueblos originarios no fueron espectadores pasivos, sino protagonistas de la defensa de sus comunidades y territorios."},
+ {c:1,f:"1493–1494",t:"Fundación de La Isabela",q:["Durante el segundo viaje de Colón, a inicios de 1494, se estableció La Isabela, en la costa norte de la isla, uno de los primeros asentamientos europeos permanentes en América. El asentamiento experimentó dificultades de abastecimiento, conflictos y problemas sanitarios."],w:"La Isabela representa una etapa inicial de la expansión colonial europea en el Caribe y ayuda a comprender el establecimiento de las primeras estructuras de gobierno colonial."},
+ {c:1,f:"1496–1502",t:"Consolidación de Santo Domingo",q:["La ciudad de Santo Domingo se desarrolló como centro administrativo y político de la colonización española en la isla. Su crecimiento estuvo ligado a la expansión del sistema colonial y al establecimiento de instituciones de gobierno."],w:"Santo Domingo se convirtió en un punto estratégico para la administración colonial y para las expediciones españolas hacia otras partes del continente americano."},
+ {c:2,f:"Siglos XVI–XVII",t:"Presencia africana y formación de una sociedad diversa",q:["La colonización española introdujo la esclavitud africana como parte de la economía colonial. Las personas africanas esclavizadas y sus descendientes contribuyeron decisivamente a la formación cultural, social y económica de la isla. También hubo resistencia, fugas, cimarronaje y conservación de prácticas culturales."],w:"La sociedad dominicana se formó mediante procesos complejos de interacción entre poblaciones indígenas, europeas y africanas, bajo condiciones profundamente desiguales. Comprender esta historia permite reconocer las raíces diversas de la cultura dominicana."},
+ {c:2,f:"1519–1533",t:"Resistencia de Enriquillo",q:["Enriquillo, líder indígena, encabezó una prolongada rebelión contra los abusos coloniales en las zonas montañosas del suroeste de la isla. Su resistencia obligó a las autoridades españolas a negociar y buscar una salida al conflicto."],w:"Enriquillo simboliza la defensa de la dignidad, la libertad y la autonomía frente a la dominación colonial."},
+ {c:2,f:"1605–1606",t:"Devastaciones de Osorio",q:["Las autoridades españolas ordenaron despoblar y trasladar comunidades de la zona norte y oeste de la colonia para combatir el contrabando y reforzar el control comercial. La medida provocó desplazamientos, pérdidas económicas y transformaciones territoriales."],w:"Las devastaciones contribuyeron a debilitar el control efectivo de España sobre algunas zonas occidentales y favorecieron procesos que, con el tiempo, facilitaron la expansión de asentamientos franceses."},
+ {c:2,f:"1697",t:"Tratado de Ryswick: contexto europeo y límites de su alcance",q:["El Tratado de Ryswick se firmó en 1697 para poner fin a la Guerra de los Nueve Años, un conflicto europeo que enfrentó a Francia con España y otras potencias. El acuerdo comprendió diferentes disposiciones diplomáticas y territoriales relativas a los países involucrados."],x:{t:"Una precisión histórica fundamental",p:["El tratado de paz entre España y Francia no menciona expresamente la isla de Santo Domingo ni establece una división de la isla. Contiene una cláusula general sobre la restitución de plazas, fortalezas y posiciones ocupadas durante la guerra, sin nombrar la isla. El historiador François Blancpain analiza precisamente esta diferencia entre el contenido documental y la interpretación tradicional de Ryswick.","Por tanto, Ryswick no debe presentarse como una autorización expresa para ocupar ilegalmente territorios de la isla ni como el tratado que formalmente trazó la frontera entre las colonias española y francesa.","Desde la perspectiva de la soberanía territorial, es necesario distinguir entre las posesiones reconocidas mediante títulos jurídicos y los asentamientos o avances de ocupación realizados sobre territorios cuyo dominio era objeto de controversia."]},w:"Ryswick ayuda a comprender el contexto internacional en el que se desarrollaron las relaciones entre Francia y España, pero su contenido debe interpretarse con rigor y sin atribuirle disposiciones que no aparecen expresamente en el documento.",s:"Fuente académica: François Blancpain, «Les droits de la France sur la colonie de Saint-Domingue et le traité de Ryswick», Outre-Mers, t. 94, n.º 354-355, 2007, pp. 305–329. Disponible en Persée.",u:"https://www.persee.fr/doc/outre_1631-0438_2007_num_94_354_4266"},
+ {c:2,f:"Siglos XVII–XVIII",t:"Consolidación de asentamientos franceses en el oeste",q:["Durante varias décadas se desarrollaron asentamientos franceses en la parte occidental de la isla, en un proceso que incluyó ocupación, actividad económica, conflictos con España y negociaciones entre las monarquías europeas."],w:"La presencia francesa se consolidó gradualmente. Para comprenderla, es necesario estudiar la diferencia entre ocupación efectiva, reconocimiento diplomático y delimitación formal de fronteras."},
+ {c:2,f:"3 de junio de 1777",t:"Tratado de Aranjuez",q:["El 3 de junio de 1777, España y Francia firmaron el Tratado de Aranjuez, que estableció disposiciones específicas para delimitar sus respectivas posesiones coloniales en la isla de Santo Domingo."],x:{t:"¿Qué debemos comprender?",p:["A diferencia de Ryswick, Aranjuez sí se relacionó directamente con la delimitación territorial entre las colonias española y francesa. Fue resultado de negociaciones entre potencias coloniales y no de una decisión soberana de los habitantes de la isla."]},w:"Constituye un antecedente esencial para estudiar la evolución de la frontera insular y las relaciones entre las dos sociedades coloniales.",s:"Fuente documental: el Archivo General de la Nación registra expedientes históricos relativos al tratado de límites de 1777."},
+ {c:2,f:"1791–1804",t:"Revolución haitiana",q:["En la colonia francesa de Saint-Domingue se desarrolló una revolución que enfrentó el sistema esclavista y el dominio colonial. La lucha involucró a personas esclavizadas, libertos, dirigentes militares y potencias extranjeras.","En 1804, Haití proclamó su independencia."],w:"La Revolución haitiana transformó la historia del Caribe y del mundo atlántico. Sus efectos influyeron en la economía, la política y las relaciones entre las potencias y las sociedades de la isla."},
+ {c:2,f:"1795",t:"Tratado de Basilea",q:["España y Francia firmaron el Tratado de Basilea, por el cual España cedió a Francia su parte de la isla de Santo Domingo en el marco de los acuerdos que pusieron fin a la guerra entre ambas potencias."],w:"La cesión de 1795 fue un acontecimiento distinto de Ryswick. Para estudiar la historia territorial de la isla, es esencial no confundir el acuerdo de paz de 1697 con la cesión formal de la parte española en 1795."},
+ {c:2,f:"1808–1809",t:"Reconquista de Santo Domingo",q:["Tras la ocupación francesa de la parte oriental, sectores de la población se levantaron para restablecer el dominio español. La llamada Guerra de la Reconquista, cuyo combate decisivo fue la batalla de Palo Hincado (noviembre de 1808), culminó en julio de 1809 con la salida de las autoridades francesas de la parte oriental."],p:"Juan Sánchez Ramírez y las tropas reconquistadoras.",w:"Este proceso muestra que la soberanía territorial de la parte oriental continuó siendo objeto de disputas y cambios durante las guerras europeas y caribeñas."},
+ {c:3,f:"Diciembre de 1821",t:"Independencia Efímera",q:["José Núñez de Cáceres proclamó la independencia de la parte oriental de la isla respecto de España, en diciembre de 1821. El nuevo Estado recibió el nombre de Estado Independiente del Haití Español."],p:"José Núñez de Cáceres.",w:"Fue un intento de establecer un gobierno independiente antes de la proclamación de la República Dominicana en 1844. Su duración fue breve y no consiguió consolidar un Estado soberano estable."},
+ {c:3,f:"1822–1844",t:"Gobierno haitiano de la parte oriental",q:["En 1822, las fuerzas del presidente haitiano Jean-Pierre Boyer entraron en Santo Domingo y unificaron políticamente la isla bajo el gobierno haitiano. Durante este período se abolió la esclavitud en la parte oriental, se aplicaron nuevas disposiciones legales y administrativas y se produjeron tensiones relacionadas con la propiedad, la economía, la representación política y las diferencias sociales y culturales."],p:"Jean-Pierre Boyer.",w:"Este período forma parte central de la historia que condujo a la independencia dominicana. Debe estudiarse atendiendo tanto a los cambios institucionales y sociales como a los conflictos y resistencias que surgieron."},
+ {c:3,f:"16 de julio de 1838",t:"Fundación de La Trinitaria",k:1,q:["Juan Pablo Duarte fundó La Trinitaria el 16 de julio de 1838, junto con otros jóvenes comprometidos con la separación política del gobierno haitiano y la creación de un Estado independiente."],p:"Juan Pablo Duarte, Juan Isidro Pérez, Pedro Alejandro Pina, Félix María Ruiz, José María Serra, Benito González, Juan Nepomuceno Ravelo, Jacinto de la Concha y Felipe Alfau, fundadores, junto con otros vinculados al movimiento.",w:"La Trinitaria organizó un proyecto político de independencia que contribuyó a la fundación de la República Dominicana."},
+ {c:3,f:"1843",t:"Organización del movimiento independentista",q:["Los independentistas participaron en movimientos políticos contra el gobierno de Boyer y aprovecharon los cambios que se produjeron en Haití para avanzar en sus objetivos. Duarte y sus compañeros continuaron promoviendo la separación y la organización de una república independiente."],w:"La independencia fue el resultado de organización política, compromiso y participación de distintos sectores, no de un acontecimiento aislado."},
+ {c:3,f:"27 de febrero de 1844",t:"Proclamación de la Independencia Nacional",k:1,q:["La noche del 27 de febrero de 1844, los independentistas proclamaron la separación de Haití y el nacimiento de la República Dominicana. El movimiento tuvo como figuras destacadas a Francisco del Rosario Sánchez, Ramón Matías Mella y Juan Pablo Duarte.","Esa noche, Duarte se encontraba en el exilio, adonde había salido en 1843 perseguido por las autoridades haitianas; regresó al país a mediados de marzo de 1844. Sánchez encabezó inicialmente la Junta Central Gubernativa."],p:"Francisco del Rosario Sánchez, Ramón Matías Mella y Juan Pablo Duarte.",w:"Es la fecha fundacional de la República Dominicana y uno de los acontecimientos centrales de la identidad nacional.",x:{t:"Símbolos patrios",p:["La bandera tricolor, el escudo nacional y el himno nacional expresan la identidad, la soberanía y los ideales de la nación."]}},
+ {c:3,f:"19 de marzo de 1844",t:"Batalla de Azua",q:["Las fuerzas dominicanas enfrentaron al ejército haitiano en Azua, en uno de los primeros combates importantes para defender la independencia recién proclamada."],w:"Representa la defensa militar del nuevo Estado en un momento en que su existencia todavía era incierta."},
+ {c:3,f:"30 de marzo de 1844",t:"Batalla de Santiago",q:["Las fuerzas dominicanas resistieron el avance del ejército haitiano en Santiago, en un enfrentamiento decisivo para la defensa del territorio."],w:"Junto con otros combates de 1844, consolidó la capacidad de la nueva república para defender su independencia."},
+ {c:3,f:"6 de noviembre de 1844",t:"Primera Constitución dominicana",k:1,q:["Se promulgó la primera Constitución dominicana en San Cristóbal. El documento estableció las bases jurídicas del Estado y definió la organización de sus poderes públicos."],w:"La Constitución representó un paso fundamental en la construcción institucional de la República. También abrió debates sobre la relación entre autoridad ejecutiva, derechos ciudadanos y límites al poder."},
+ {c:4,f:"1844–1861",t:"Primera República",q:["Durante la Primera República se organizaron las instituciones nacionales, se enfrentaron amenazas militares y se desarrollaron disputas políticas entre dirigentes con diferentes proyectos de Estado. Pedro Santana y Buenaventura Báez tuvieron un papel central en la vida política de esta etapa."],p:"Pedro Santana y Buenaventura Báez.",w:"La Primera República muestra los desafíos que enfrentó un país recién independizado: defensa territorial, organización del Estado, estabilidad económica y definición de su rumbo político."},
+ {c:4,f:"18 de marzo de 1861",t:"Anexión a España",q:["Pedro Santana anunció la anexión de la República Dominicana a España. La medida puso fin a la independencia republicana y restableció el dominio español sobre la parte oriental de la isla."],p:"Pedro Santana.",w:"La anexión provocó oposición y contribuyó al desarrollo de un movimiento restaurador que buscaba recuperar la soberanía nacional."},
+ {c:4,f:"16 de agosto de 1863",t:"Grito de Capotillo",k:1,q:["En Capotillo, en la región del Cibao, se inició el levantamiento que dio impulso a la Guerra de la Restauración contra el dominio español."],p:"Santiago Rodríguez, Benito Monción, José Cabrera, Gaspar Polanco, Gregorio Luperón y otros combatientes restauradores.",w:"El Grito de Capotillo simboliza la decisión de recuperar la independencia y constituye una fecha fundamental de la memoria patriótica dominicana."},
+ {c:4,f:"1863–1865",t:"Guerra de la Restauración",q:["Las fuerzas restauradoras libraron una guerra contra España. El conflicto involucró a combatientes de diversas regiones y produjo importantes pérdidas humanas y materiales. En 1865, España abandonó la anexión y se restableció la República."],x:{t:"Santiago, septiembre de 1863",p:["Entre el 6 y el 13 de septiembre de 1863, los restauradores sitiaron Santiago, la ciudad ardió y los españoles se retiraron hacia Puerto Plata. El general José María Checo comandó el cantón de La Otra Banda. Consulta la sección especial «Santiago 1863»."]},w:"La Restauración reafirmó la soberanía dominicana y demostró la capacidad de movilización de sectores de la sociedad para recuperar la independencia."},
+ {c:5,f:"1865–1916",t:"Inestabilidad política y construcción del Estado",q:["Tras la Restauración, el país vivió conflictos entre caudillos, cambios frecuentes de gobierno y dificultades para consolidar instituciones estables. Los gobiernos de Buenaventura Báez, Gregorio Luperón, Ulises Heureaux y otros dirigentes marcaron diferentes etapas de este período."],p:"Buenaventura Báez, Gregorio Luperón, Ulises Heureaux y otros dirigentes.",w:"Esta etapa permite comprender las dificultades de construir un Estado nacional después de la independencia y la Restauración."},
+ {c:5,f:"1882–1899",t:"Gobierno de Ulises Heureaux",q:["Ulises Heureaux, conocido como Lilís, gobernó durante varios períodos y consolidó un régimen autoritario. Su administración impulsó determinadas obras y acuerdos financieros, pero también recurrió a la represión política y acumuló una deuda externa significativa."],p:"Ulises Heureaux (Lilís).",w:"Su gobierno ilustra la tensión entre modernización material, concentración del poder y debilidad institucional."},
+ {c:5,f:"1916–1924",t:"Primera ocupación militar estadounidense",q:["En 1916, Estados Unidos ocupó militarmente la República Dominicana. Las autoridades militares estadounidenses asumieron el control del gobierno, reorganizaron instituciones y administraron las finanzas públicas. La ocupación enfrentó resistencia de sectores dominicanos, entre ellos los guerrilleros del Este conocidos como «gavilleros», y la oposición cívica nacionalista. Desde octubre de 1922, un gobierno provisional encabezado por Juan Bautista Vicini Burgos preparó la transición, y la ocupación terminó en julio de 1924."],w:"La ocupación afectó la soberanía nacional y dejó consecuencias en la administración estatal, las fuerzas armadas y la vida política."},
+ {c:5,f:"1924–1930",t:"Gobierno de Horacio Vásquez",q:["Con el fin de la ocupación, se restableció un gobierno dominicano encabezado por Horacio Vásquez. Las tensiones políticas y las disputas sobre la continuidad del poder debilitaron su administración y contribuyeron a la crisis que precedió al ascenso de Rafael Leónidas Trujillo."],p:"Horacio Vásquez.",w:"Este período permite estudiar las dificultades de la transición hacia una democracia estable después de una ocupación militar."},
+ {c:6,f:"1930–1961",t:"Dictadura de Rafael Leónidas Trujillo",q:["Rafael Leónidas Trujillo controló el poder político dominicano durante más de tres décadas. Su régimen concentró las instituciones, promovió un culto a la personalidad y utilizó la vigilancia, la censura, la persecución y la violencia contra sus adversarios. También impulsó obras públicas y cambios económicos que deben analizarse junto con el carácter represivo del régimen.","En octubre de 1937 se produjo la matanza de miles de haitianos y dominicanos de ascendencia haitiana en la zona fronteriza, uno de los episodios más graves de violencia estatal del siglo XX dominicano."],p:"Rafael Leónidas Trujillo.",w:"El estudio de la dictadura permite comprender el costo humano del autoritarismo, la importancia de los derechos fundamentales y la necesidad de instituciones que limiten el poder."},
+ {c:6,f:"14 de junio de 1959",t:"Expedición contra la dictadura",q:["Un grupo de expedicionarios llegó por aire a Constanza el 14 de junio y, días después, por mar a Maimón y Estero Hondo, con el propósito de enfrentar la dictadura trujillista. Aunque la expedición fue derrotada militarmente, su memoria inspiró a sectores de la oposición."],w:"El acontecimiento representa una expresión de resistencia contra el régimen y una referencia importante para la historia de la oposición dominicana."},
+ {c:6,f:"25 de noviembre de 1960",t:"Asesinato de las hermanas Mirabal",k:1,q:["Patria, Minerva y María Teresa Mirabal fueron asesinadas por agentes del régimen trujillista. Su hermana Dedé preservó posteriormente su memoria y contribuyó a que su historia fuera conocida por nuevas generaciones."],p:"Patria, Minerva, María Teresa y Dedé Mirabal.",w:"Las hermanas Mirabal se convirtieron en símbolos de la resistencia a la dictadura y de la lucha por los derechos de las mujeres. En su memoria, la Asamblea General de las Naciones Unidas declaró en 1999 el 25 de noviembre como Día Internacional de la Eliminación de la Violencia contra la Mujer."},
+ {c:6,f:"30 de mayo de 1961",t:"Muerte de Trujillo",q:["Rafael Leónidas Trujillo fue asesinado el 30 de mayo de 1961 por un grupo de conspiradores. Su muerte abrió una etapa de transición política, aunque el fin de la dictadura no produjo de inmediato un sistema democrático plenamente consolidado."],w:"El acontecimiento marcó el final del prolongado control personal de Trujillo y el inicio de una transformación política compleja."},
+ {c:7,f:"1962–1963",t:"Apertura democrática y gobierno de Juan Bosch",q:["Tras la caída de la dictadura, se celebraron elecciones y Juan Bosch asumió la Presidencia en febrero de 1963. Su gobierno impulsó una nueva Constitución y propuestas de reforma institucional y social. En septiembre de ese año fue derrocado mediante un golpe de Estado militar."],p:"Juan Bosch.",w:"Este período representa un intento de consolidación democrática y muestra la fragilidad de las instituciones en una sociedad marcada por décadas de autoritarismo."},
+ {c:7,f:"Abril de 1965",t:"Revolución de Abril e intervención estadounidense",q:["El 24 de abril de 1965 estalló una rebelión que buscaba restablecer el orden constitucional asociado al gobierno de Juan Bosch y la Constitución de 1963. El conflicto enfrentó a sectores militares y civiles dominicanos y estuvo acompañado, a partir del 28 de abril, por una segunda intervención militar de Estados Unidos."],p:"Francisco Alberto Caamaño Deñó, José Rafael Molina Ureña y combatientes constitucionalistas; del lado contrario, la Junta Militar y el Gobierno de Reconstrucción Nacional de Antonio Imbert Barrera.",w:"La Revolución de Abril constituye un acontecimiento central de la historia política contemporánea, por su defensa del orden constitucional, su costo humano y sus consecuencias para la vida institucional del país."},
+ {c:7,f:"1966–1978",t:"Gobiernos de Joaquín Balaguer",q:["Joaquín Balaguer gobernó durante doce años consecutivos. Su administración impulsó obras de infraestructura y programas de desarrollo, pero también estuvo marcada por denuncias y documentación histórica de represión política, restricciones a la oposición y violencia contra adversarios."],p:"Joaquín Balaguer.",w:"Esta etapa permite estudiar la relación entre desarrollo material, orden político, libertades públicas y derechos humanos."},
+ {c:7,f:"1978",t:"Alternancia política",q:["Antonio Guzmán Fernández ganó las elecciones de 1978, en un proceso que condujo a la primera alternancia presidencial de gran relevancia desde el inicio del período balaguerista de 1966."],p:"Antonio Guzmán Fernández.",w:"La alternancia contribuyó a la apertura política y al desarrollo de la competencia electoral como mecanismo de cambio de gobierno."},
+ {c:7,f:"Década de 1980",t:"Crisis económica y desafíos sociales",q:["La República Dominicana enfrentó dificultades económicas, inflación, endeudamiento, ajustes económicos y protestas sociales. Las consecuencias afectaron el empleo, el consumo y las condiciones de vida de amplios sectores de la población."],w:"El período permite comprender la relación entre políticas económicas, estabilidad social y bienestar ciudadano."},
+ {c:7,f:"1990–2000",t:"Reformas y expansión de las comunicaciones",q:["Durante la década de 1990 se ampliaron las telecomunicaciones, los servicios y la infraestructura, al tiempo que continuaron debates sobre reformas electorales, gobernabilidad y desarrollo económico. Leonel Fernández asumió la Presidencia en 1996."],w:"Estos cambios contribuyeron a transformar la economía y las comunicaciones, aunque persistieron desigualdades y retos en educación, empleo y servicios públicos."},
+ {c:7,f:"2003",t:"Crisis bancaria",q:["La quiebra de importantes entidades financieras produjo una crisis económica y fiscal que afectó el ahorro, la confianza pública, la inflación y el poder adquisitivo de los hogares."],w:"El episodio mostró la importancia de la supervisión financiera, la transparencia y la responsabilidad en la administración de los recursos públicos y privados."},
+ {c:7,f:"2004–2012",t:"Infraestructura y expansión del transporte urbano",q:["Durante los gobiernos de Leonel Fernández se desarrollaron obras de infraestructura y se construyó la primera línea del Metro de Santo Domingo, inaugurada el 27 de febrero de 2008, que inició su operación comercial el 30 de enero de 2009. El período también estuvo acompañado por debates sobre endeudamiento, gasto público y distribución de los beneficios del crecimiento económico."],p:"Leonel Fernández.",w:"La infraestructura transformó la movilidad y algunos servicios urbanos, mientras persistieron discusiones sobre desigualdad, calidad de los servicios públicos y sostenibilidad fiscal."},
+ {c:7,f:"2012–2020",t:"Educación, programas sociales y debates institucionales",q:["Durante los gobiernos de Danilo Medina se amplió el presupuesto destinado a educación, se desarrollaron programas sociales y se construyeron nuevas escuelas. El período también estuvo marcado por debates sobre calidad educativa, transparencia, corrupción y la efectividad del gasto público."],p:"Danilo Medina.",w:"La experiencia permite analizar la diferencia entre ampliar recursos y conseguir mejoras sostenidas en los aprendizajes, la equidad y la calidad de los servicios."},
+ {c:7,f:"2015–2019",t:"Debates sobre institucionalidad y participación ciudadana",q:["Se intensificaron los debates públicos sobre corrupción, transparencia, independencia de las instituciones y confianza ciudadana. Las movilizaciones sociales y las demandas de rendición de cuentas adquirieron mayor visibilidad."],w:"La participación ciudadana y la fiscalización de los poderes públicos forman parte de la construcción democrática y de la defensa del interés general."},
+ {c:8,f:"2020",t:"Pandemia de COVID-19",q:["La pandemia de COVID-19 afectó la salud pública, el empleo, el turismo, el comercio y la vida cotidiana. Las escuelas suspendieron temporalmente la docencia presencial y tuvieron que recurrir a estrategias de educación a distancia, con resultados desiguales según el acceso a internet, dispositivos y apoyo familiar."],w:"La pandemia evidenció la importancia de los sistemas de salud, la protección social, la resiliencia comunitaria y la inclusión digital en la educación."},
+ {c:8,f:"16 de agosto de 2020",t:"Inicio del gobierno de Luis Abinader",q:["Luis Abinader asumió la Presidencia de la República en medio de la crisis sanitaria y económica provocada por la pandemia."],p:"Luis Abinader.",w:"El nuevo gobierno tuvo que atender la emergencia sanitaria, la recuperación económica y los desafíos de la administración pública en circunstancias excepcionales."},
+ {c:8,f:"2021",t:"Vacunación y recuperación económica",q:["La campaña de vacunación contra la COVID-19 avanzó en todo el país. Paralelamente, se desarrollaron medidas de recuperación económica y reapertura gradual de actividades."],w:"El período muestra la relación entre salud pública, actividad económica, educación y capacidad de respuesta institucional."},
+ {c:8,f:"2021–2023",t:"Frontera, migración y relaciones con Haití",q:["La crisis política, económica y de seguridad de Haití intensificó los desafíos fronterizos y migratorios para la República Dominicana. Las autoridades dominicanas adoptaron medidas de control fronterizo y seguridad, mientras organismos internacionales y organizaciones sociales plantearon preocupaciones sobre derechos humanos, protección de migrantes y cooperación bilateral."],w:"La frontera es un tema de soberanía, seguridad y relaciones internacionales que requiere políticas públicas, cumplimiento de la ley, cooperación y respeto a la dignidad humana."},
+ {c:8,f:"18 de febrero de 2024",t:"Elecciones municipales",q:["La ciudadanía eligió autoridades municipales, incluyendo alcaldes, directores distritales y miembros de los gobiernos locales."],w:"Los gobiernos municipales tienen responsabilidades directas en la organización territorial, los servicios comunitarios y la gestión local. Las elecciones constituyen una vía de participación ciudadana."},
+ {c:8,f:"19 de mayo de 2024",t:"Elecciones presidenciales y congresuales",q:["Se celebraron elecciones presidenciales y congresuales. Luis Abinader fue reelegido para el período constitucional 2024–2028."],p:"Luis Abinader.",w:"El proceso electoral constituye un mecanismo de selección de las autoridades nacionales y de renovación de la representación política. Su evaluación debe considerar los resultados oficiales, la participación y las garantías electorales.",s:"Fuente: Junta Central Electoral. Resultados oficiales de las elecciones de 2024."},
+ {c:8,f:"2024",t:"Crecimiento económico y desafíos nacionales",q:["La economía dominicana continuó dependiendo de actividades como el turismo, las zonas francas, las remesas, la construcción y los servicios. Al mismo tiempo, persistieron desafíos relacionados con el costo de la vida, la desigualdad, la calidad de la educación, el acceso a servicios públicos y la sostenibilidad ambiental."],w:"El crecimiento económico debe analizarse junto con su impacto en el bienestar de los hogares, las oportunidades de empleo, la equidad y la calidad de los servicios públicos."},
+ {c:8,f:"2025",t:"Memoria histórica, archivos y transformación digital",q:["La digitalización de documentos históricos y la expansión de recursos educativos digitales abrieron nuevas oportunidades para consultar fuentes primarias, preservar el patrimonio documental y acercar la historia a estudiantes y ciudadanos."],w:"Los archivos digitales facilitan la investigación histórica y permiten que las nuevas generaciones comparen documentos, verifiquen afirmaciones y conozcan diferentes perspectivas del pasado.",x:{t:"Actividad sugerida",p:["Consultar documentos del Archivo General de la Nación y comparar su contenido con las explicaciones de los libros de texto."]}},
+ {c:8,f:"2025",t:"Educación, tecnología e innovación",q:["La transformación digital continuó generando oportunidades y desafíos para la educación dominicana. El desarrollo de competencias científicas, tecnológicas, artísticas y ciudadanas constituye un área relevante para preparar a las nuevas generaciones."],w:"La innovación educativa debe evaluarse por su contribución efectiva a los aprendizajes, el pensamiento crítico, la creatividad, la inclusión y la preparación para la vida."}
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+const norm = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+F.forEach((f,i)=>{f.n=i+1; f.idx=norm([f.f,f.t,...f.q,f.p||"",f.w,f.x?f.x.p.join(" "):""].join(" "));});
+
+const capSel = document.getElementById("capSel");
+CAPS.forEach((c,i)=>{const o=document.createElement("option");o.value=i+1;o.textContent=`Capítulo ${i+1}. ${c}`;capSel.appendChild(o);});
+
+function fichaHTML(f){
+  return `<article class="ficha${f.k?" key":""}" id="ficha-${f.n}">
+    <div class="date">${esc(f.f)}</div>
+    <div class="card">
+      <div class="fn">Ficha ${f.n}</div>
+      <h4>${esc(f.t)}</h4>
+      <div class="lbl">¿Qué sucedió?</div>
+      ${f.q.map(p=>`<p>${esc(p)}</p>`).join("")}
+      ${f.x?`<div class="callout"><div class="lbl">${esc(f.x.t)}</div>${f.x.p.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`:""}
+      ${f.p?`<p class="prot"><b>Protagonistas:</b> ${esc(f.p)}</p>`:""}
+      <div class="lbl why">¿Por qué es importante?</div>
+      <p>${esc(f.w)}</p>
+      ${f.s?`<p class="src">${esc(f.s)}${f.u?` <a href="${f.u}" target="_blank" rel="noopener">Leer el estudio</a>`:""}</p>`:""}
+    </div>
+  </article>`;
+}
+function renderTimeline(){
+  const q = norm(document.getElementById("q").value.trim());
+  const cap = +capSel.value || 0;
+  let out = "", shown = 0;
+  CAPS.forEach((c,i)=>{
+    const list = F.filter(f=>f.c===i+1 && (!cap||cap===i+1) && (!q||f.idx.includes(q)));
+    if(!list.length) return;
+    shown += list.length;
+    out += `<div class="chapter" id="cap-${i+1}"><div class="chapter-head"><div class="num">Capítulo ${i+1}</div><h3>${esc(c)}</h3></div><div class="timeline">${list.map(fichaHTML).join("")}</div></div>`;
+  });
+  document.getElementById("timeline").innerHTML = out;
+  document.getElementById("empty").hidden = shown>0;
+  document.getElementById("count").textContent = `${shown} de ${F.length} fichas`;
+}
+document.getElementById("q").addEventListener("input", renderTimeline);
+capSel.addEventListener("change", renderTimeline);
+renderTimeline();
+// los enlaces de etapas deben funcionar aunque haya un filtro activo
+document.querySelectorAll(".era").forEach(a=>a.addEventListener("click",()=>{
+  if(document.getElementById("q").value||capSel.value){document.getElementById("q").value="";capSel.value="";renderTimeline();}
+}));
+
+/* ---------- Presidentes ---------- */
+const TIPOS = {
+  c:"Constitucional", p:"Provisional / interino", g:"Gobierno colegiado", d:"Junta o gobierno de facto",
+  r:"Gobierno rival o restaurador", f:"Formal bajo la dictadura", o:"Dominio extranjero"
+};
+const INT = {c:"No",p:"Sí",g:"Sí",f:"No",d:"No aplica",r:"No aplica",o:"No aplica"};
+// [nombre, inicio, fin, tipo, condición, interino opcional]
+const P = [
+ {t:"Primera República",y:"1844–1861",rows:[
+  ["Francisco del Rosario Sánchez","28/02/1844","01/03/1844","g","Presidente interino de la Junta Central Gubernativa"],
+  ["Tomás Bobadilla","01/03/1844","09/06/1844","g","Presidente de la Junta Central Gubernativa; destituido"],
+  ["Francisco del Rosario Sánchez","09/06/1844","12/07/1844","g","Presidente de la Junta Central Gubernativa; destituido"],
+  ["Pedro Santana","12/07/1844","13/11/1844","g","Presidente de la Junta Central Gubernativa"],
+  ["Pedro Santana","13/11/1844","04/08/1848","c","Primer presidente constitucional; renunció"],
+  ["Manuel Jimenes","08/09/1848","29/05/1849","c","Presidente constitucional; derrocado"],
+  ["Pedro Santana","30/05/1849","23/09/1849","p","Jefe Supremo tras la crisis de 1849","Sí"],
+  ["Buenaventura Báez","24/09/1849","15/02/1853","c","Presidente constitucional"],
+  ["Pedro Santana","15/02/1853","26/05/1856","c","Presidente constitucional; renunció"],
+  ["Manuel de Regla Mota","02/01/1855","05/09/1855","p","Vicepresidente encargado del Poder Ejecutivo durante una ausencia de Santana"],
+  ["Manuel de Regla Mota","26/05/1856","08/10/1856","c","Vicepresidente que asumió tras la renuncia de Santana; renunció"],
+  ["Buenaventura Báez","08/10/1856","12/06/1858","c","Vicepresidente que asumió tras la renuncia de Regla Mota; capituló"],
+  ["José Desiderio Valverde","07/07/1857","31/08/1858","r","Gobierno rival surgido de la revolución de 1857 en Santiago"],
+  ["Pedro Santana","13/06/1858","18/03/1861","c","Presidente; proclamó la anexión a España"]],
+  note:"El gobierno de José Desiderio Valverde se superpuso al de Báez y al de Santana durante la revolución de 1857–1858. Se incluye para reflejar la existencia de autoridades rivales, no como una sucesión presidencial ordinaria. Santiago Espaillat fue electo presidente en 1849, pero no asumió el cargo."},
+ {t:"Anexión a España y Guerra de la Restauración",y:"1861–1865",intro:"Entre marzo de 1861 y julio de 1865, el territorio estuvo bajo soberanía española, gobernado por capitanes generales. Desde septiembre de 1863 existió un gobierno restaurador, con sede en Santiago, que reivindicaba la soberanía dominicana.",rows:[
+  ["Pedro Santana","18/03/1861","20/07/1862","o","Gobernador y capitán general bajo la anexión española; no presidente de una república independiente"],
+  ["Felipe Rivero y Lemoine","20/07/1862","22/10/1863","o","Capitán general español"],
+  ["Carlos de Vargas y Cerveto","23/10/1863","30/03/1864","o","Capitán general español"],
+  ["José de la Gándara y Navarro","31/03/1864","11/07/1865","o","Capitán general español; dirigió la evacuación"],
+  ["José Antonio Salcedo (Pepillo)","14/09/1863","10/10/1864","r","Presidente del Gobierno restaurador"],
+  ["Gaspar Polanco","10/10/1864","24/01/1865","r","Presidente del Gobierno restaurador"],
+  ["Benigno Filomeno de Rojas","24/01/1865","24/03/1865","r","Presidente del Gobierno restaurador"],
+  ["Pedro Antonio Pimentel","25/03/1865","04/08/1865","r","Presidente del Gobierno restaurador y, desde julio de 1865, de la República restaurada; derrocado"],
+  ["José María Cabral","04/08/1865","15/11/1865","p","Protector de la República durante la transición"]],
+  note:"Las autoridades restauradoras ejercieron durante una guerra y un proceso de recuperación de soberanía. No deben confundirse con una sucesión presidencial constitucional estable."},
+ {t:"Segunda República",y:"1865–1916",rows:[
+  ["Pedro Guillermo","15/11/1865","08/12/1865","p","Presidente interino"],
+  ["Buenaventura Báez","08/12/1865","29/05/1866","c","Presidente; derrocado"],
+  ["Triunvirato: Pedro Antonio Pimentel, Gregorio Luperón y Federico de Jesús García","29/05/1866","22/08/1866","d","Gobierno colegiado surgido del derrocamiento de Báez"],
+  ["José María Cabral","22/08/1866","31/01/1868","c","Interino hasta el 29/09/1866; luego presidente electo; derrocado"],
+  ["Manuel Altagracia Cáceres","31/01/1868","13/02/1868","p","Encargado del Poder Ejecutivo"],
+  ["Junta de generales: José Antonio Hungría, Francisco Antonio Gómez y José Ramón Luciano","13/02/1868","02/05/1868","d","Junta provisional"],
+  ["Buenaventura Báez","02/05/1868","02/01/1874","c","Presidente; gobierno de los Seis Años"],
+  ["Ignacio María González","02/01/1874","23/02/1876","c","Jefe supremo de la revolución desde noviembre de 1873; presidente electo desde el 05/02/1874; renunció"],
+  ["Consejo de Secretarios de Estado","23/02/1876","29/04/1876","g","Gobierno colegiado provisional"],
+  ["Ulises Francisco Espaillat","29/04/1876","05/10/1876","c","Presidente constitucional; derrocado"],
+  ["Junta Superior Gubernativa","05/10/1876","11/11/1876","g","Gobierno colegiado provisional"],
+  ["Ignacio María González","11/11/1876","09/12/1876","c","Presidente; renunció"],
+  ["Junta de Gobierno Provisional presidida por Marcos Antonio Cabral","10/12/1876","26/12/1876","g","Gobierno colegiado provisional"],
+  ["Buenaventura Báez","27/12/1876","02/03/1878","c","Presidente; derrocado"],
+  ["Cesáreo Guillermo","05/03/1878","06/07/1878","p","Presidente interino"],
+  ["Ignacio María González","06/07/1878","02/09/1878","c","Presidente; derrocado"],
+  ["Jefes del movimiento revolucionario: Ulises Heureaux y Cesáreo Guillermo","02/09/1878","06/09/1878","d","Mando colegiado de facto"],
+  ["Jacinto de Castro","07/09/1878","29/09/1878","p","Presidente de la Suprema Corte encargado del Poder Ejecutivo; renunció"],
+  ["Consejo de Secretarios de Estado","30/09/1878","27/02/1879","g","Gobierno colegiado provisional"],
+  ["Cesáreo Guillermo","27/02/1879","06/12/1879","c","Presidente; derrocado"],
+  ["Gregorio Luperón","06/12/1879","01/09/1880","p","Presidente del Gobierno provisional, instalado en Puerto Plata desde octubre de 1879"],
+  ["Fernando Arturo de Meriño","01/09/1880","01/09/1882","c","Presidente constitucional"],
+  ["Ulises Heureaux","01/09/1882","01/09/1884","c","Presidente constitucional"],
+  ["Francisco Gregorio Billini","01/09/1884","16/05/1885","c","Presidente constitucional; renunció"],
+  ["Alejandro Woss y Gil","16/05/1885","06/01/1887","c","Vicepresidente que asumió tras la renuncia de Billini"],
+  ["Ulises Heureaux","06/01/1887","26/07/1899","c","Presidente en mandatos sucesivos; asesinado en Moca"],
+  ["Wenceslao Figuereo","26/07/1899","30/08/1899","c","Vicepresidente que asumió tras el asesinato de Heureaux; derrocado"],
+  ["Junta Popular Revolucionaria de Gobierno","31/08/1899","04/09/1899","g","Gobierno colegiado provisional"],
+  ["Horacio Vásquez","04/09/1899","15/11/1899","p","Presidente del Gobierno provisional"],
+  ["Juan Isidro Jimenes","15/11/1899","02/05/1902","c","Presidente constitucional; derrocado"],
+  ["Horacio Vásquez","26/04/1902","23/04/1903","p","Presidente del Gobierno provisional; derrocado"],
+  ["Alejandro Woss y Gil","23/03/1903","24/11/1903","p","Jefe de la revolución iniciada el 23/03/1903; presidente provisional y luego electo (desde el 01/08/1903); derrocado"],
+  ["Carlos Felipe Morales Languasco","24/11/1903","24/12/1905","c","Provisional hasta el 17/06/1904; luego presidente constitucional; renunció"],
+  ["Consejo de Secretarios de Estado","24/12/1905","29/12/1905","g","Gobierno colegiado provisional"],
+  ["Ramón Cáceres","29/12/1905","19/11/1911","c","Vicepresidente que asumió en 1905; presidente electo desde 1908; asesinado"],
+  ["Consejo de Secretarios de Estado","19/11/1911","05/12/1911","g","Gobierno colegiado provisional"],
+  ["Eladio Victoria","05/12/1911","30/11/1912","c","Interino designado por el Congreso; electo desde el 27/02/1912; renunció"],
+  ["Adolfo Alejandro Nouel","01/12/1912","13/04/1913","p","Presidente provisional designado por el Congreso; renunció"],
+  ["José Bordas Valdez","14/04/1913","27/08/1914","p","Presidente provisional designado por el Congreso"],
+  ["Ramón Báez","28/08/1914","05/12/1914","p","Presidente provisional"],
+  ["Juan Isidro Jimenes","05/12/1914","07/05/1916","c","Presidente constitucional; renunció ante el desembarco estadounidense"],
+  ["Consejo de Secretarios de Estado","07/05/1916","31/07/1916","g","Gobierno colegiado provisional"],
+  ["Francisco Henríquez y Carvajal","31/07/1916","29/11/1916","p","Presidente provisional elegido por el Congreso; desplazado al proclamarse el gobierno militar estadounidense"]],
+  note:"Esta etapa tuvo numerosas crisis, juntas y gobiernos provisionales. Algunas fechas aparecen registradas de forma distinta según la cronología consultada, sobre todo en 1878, 1903 y 1913–1914."},
+ {t:"Primera ocupación militar estadounidense",y:"1916–1924",rows:[
+  ["Gobierno militar estadounidense","29/11/1916","21/10/1922","o","Ocupación militar; el gobernador militar ejerció el Poder Ejecutivo"],
+  ["Juan Bautista Vicini Burgos","21/10/1922","12/07/1924","p","Presidente provisional bajo el Plan Hughes-Peynado, encargado de organizar las elecciones de 1924 y la salida de las tropas"]],
+  note:"Entre 1916 y 1922 no hubo presidente dominicano. A partir de octubre de 1922, el gobierno provisional de Vicini Burgos administró la transición mientras las tropas estadounidenses seguían en el país."},
+ {t:"De la salida de la ocupación a la dictadura",y:"1924–1961",rows:[
+  ["Horacio Vásquez","12/07/1924","03/03/1930","c","Presidente constitucional; derrocado"],
+  ["Rafael Estrella Ureña","03/03/1930","22/04/1930","p","Presidente provisional tras el movimiento de febrero de 1930"],
+  ["Jacinto Bienvenido Peynado","22/04/1930","21/05/1930","p","Encargado provisional del Poder Ejecutivo"],
+  ["Rafael Estrella Ureña","21/05/1930","16/08/1930","p","Presidente provisional, restituido"],
+  ["Rafael Leónidas Trujillo","16/08/1930","16/08/1938","f","Presidente formal; dictador"],
+  ["Jacinto Bienvenido Peynado","16/08/1938","07/03/1940","f","Presidente formal bajo el régimen trujillista; murió en el cargo"],
+  ["Manuel de Jesús Troncoso de la Concha","07/03/1940","18/05/1942","f","Vicepresidente que asumió tras la muerte de Peynado, bajo el régimen trujillista"],
+  ["Rafael Leónidas Trujillo","18/05/1942","16/08/1952","f","Presidente formal y gobernante efectivo"],
+  ["Héctor Bienvenido Trujillo","16/08/1952","03/08/1960","f","Presidente formal bajo el régimen trujillista; renunció"],
+  ["Joaquín Balaguer","03/08/1960","31/12/1961","f","Vicepresidente que asumió tras la renuncia de Héctor Trujillo"]],
+  note:"Trujillo mantuvo el poder efectivo durante todo el período 1930–1961, incluso cuando otras personas ocuparon formalmente la Presidencia. Es importante distinguir la titularidad oficial del cargo del control político real."},
+ {t:"Transición democrática y Revolución de Abril",y:"1962–1966",rows:[
+  ["Consejo de Estado presidido por Joaquín Balaguer","01/01/1962","16/01/1962","g","Gobierno colegiado de transición; derrocado"],
+  ["Junta cívico-militar presidida por Huberto Bogaert","16/01/1962","18/01/1962","d","Junta de facto; duró dos días"],
+  ["Consejo de Estado presidido por Rafael F. Bonnelly","18/01/1962","27/02/1963","g","Gobierno colegiado de transición; organizó las elecciones de 1962"],
+  ["Juan Bosch","27/02/1963","25/09/1963","c","Presidente constitucional; derrocado por golpe de Estado"],
+  ["Junta provisional presidida por Víctor Elby Viñas Román","25/09/1963","26/09/1963","d","Junta militar de facto tras el golpe"],
+  ["Triunvirato presidido por Emilio de los Santos","26/09/1963","22/12/1963","d","Gobierno de facto; de los Santos renunció"],
+  ["Triunvirato presidido por Donald Reid Cabral","22/12/1963","25/04/1965","d","Gobierno de facto; derrocado al inicio de la Revolución de Abril"],
+  ["José Rafael Molina Ureña","25/04/1965","27/04/1965","r","Presidente provisional del bando constitucionalista"],
+  ["Junta Militar presidida por Pedro Bartolomé Benoit","01/05/1965","07/05/1965","d","Junta del bando opuesto a los constitucionalistas, con base en San Isidro"],
+  ["Francisco Alberto Caamaño Deñó","04/05/1965","03/09/1965","r","Presidente del gobierno constitucionalista, elegido por el Congreso de 1963"],
+  ["Gobierno de Reconstrucción Nacional presidido por Antonio Imbert Barrera","07/05/1965","30/08/1965","r","Gobierno rival del bando opuesto a los constitucionalistas"],
+  ["Héctor García Godoy","03/09/1965","01/07/1966","p","Presidente provisional de transición, acordado mediante el Acta de Reconciliación"]],
+  note:"Durante la Revolución de Abril coexistieron autoridades rivales. Algunas fechas se superponen porque representan gobiernos distintos que reclamaban legitimidad en medio del conflicto. Algunas cronologías sitúan la formación de la Junta de San Isidro desde el 28 de abril de 1965."},
+ {t:"Gobiernos desde 1966 hasta la actualidad",y:"1966–2028",rows:[
+  ["Joaquín Balaguer","01/07/1966","16/08/1978","c","Presidente constitucional"],
+  ["Antonio Guzmán Fernández","16/08/1978","04/07/1982","c","Presidente constitucional; murió en el cargo"],
+  ["Jacobo Majluta Azar","04/07/1982","16/08/1982","p","Vicepresidente que completó el período tras la muerte de Guzmán; suele citarse como presidente interino","Sucesión"],
+  ["Salvador Jorge Blanco","16/08/1982","16/08/1986","c","Presidente constitucional"],
+  ["Joaquín Balaguer","16/08/1986","16/08/1996","c","Presidente constitucional"],
+  ["Leonel Fernández","16/08/1996","16/08/2000","c","Presidente constitucional"],
+  ["Hipólito Mejía","16/08/2000","16/08/2004","c","Presidente constitucional"],
+  ["Leonel Fernández","16/08/2004","16/08/2012","c","Presidente constitucional"],
+  ["Danilo Medina","16/08/2012","16/08/2020","c","Presidente constitucional"],
+  ["Luis Abinader","16/08/2020","16/08/2024","c","Presidente constitucional, primer mandato"],
+  ["Luis Abinader","16/08/2024","16/08/2028","c","Presidente constitucional, segundo mandato en curso"]]}
+];
+
+const active = new Set(Object.keys(TIPOS));
+const legend = document.getElementById("legend");
+Object.entries(TIPOS).forEach(([k,v])=>{
+  const b=document.createElement("button");b.type="button";b.className="chip";b.dataset.k=k;b.setAttribute("aria-pressed","true");
+  b.innerHTML=`<span class="dot t-${k}"></span>${v}`;
+  b.addEventListener("click",()=>{
+    if(active.size===Object.keys(TIPOS).length){active.clear();active.add(k);}
+    else if(active.has(k)){active.delete(k); if(!active.size) Object.keys(TIPOS).forEach(x=>active.add(x));}
+    else active.add(k);
+    legend.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",active.has(c.dataset.k)));
+    renderP();
+  });
+  legend.appendChild(b);
+});
+let counter;
+function renderP(){
+  const q = norm(document.getElementById("pq").value.trim());
+  let out="", shown=0, total=0; counter=0;
+  P.forEach(per=>{
+    const rows = per.rows.map(r=>{counter++; return {r, n:counter};});
+    total += rows.length;
+    const vis = rows.filter(({r})=>active.has(r[3]) && (!q || norm(r[0]+" "+r[4]).includes(q)));
+    if(!vis.length) return;
+    shown += vis.length;
+    out += `<div class="period"><h3>${esc(per.t)}<span class="yr">${esc(per.y)}</span></h3>
+      ${per.intro?`<p class="intro">${esc(per.intro)}</p>`:""}
+      <div class="tbl"><table><thead><tr><th>Nº</th><th>Presidente o gobernante</th><th>Inicio</th><th>Fin</th><th>¿Interino?</th><th>Condición</th></tr></thead><tbody>
+      ${vis.map(({r,n})=>`<tr><td class="n">${n}</td><td class="name">${esc(r[0])}</td><td class="d">${r[1]}</td><td class="d">${r[2]}</td><td class="int">${r[5]||INT[r[3]]}</td><td class="cond"><span class="badge t-${r[3]}">${TIPOS[r[3]]}</span><br>${esc(r[4])}</td></tr>`).join("")}
+      </tbody></table></div>
+      ${per.note?`<p class="pnote"><b>Nota histórica:</b> ${esc(per.note)}</p>`:""}</div>`;
+  });
+  document.getElementById("periods").innerHTML = out || `<p class="empty">Ningún gobernante coincide con ese filtro.</p>`;
+  document.getElementById("pcount").textContent = `${shown} de ${total} períodos de gobierno`;
+}
+document.getElementById("pq").addEventListener("input", renderP);
+renderP();
+
+/* ---------- Juego de orden ---------- */
+const POOL = [
+  {e:"Llegada de Cristóbal Colón a la isla",y:1492},
+  {e:"Resistencia de Enriquillo",y:1519},
+  {e:"Devastaciones de Osorio",y:1605},
+  {e:"Tratado de Ryswick",y:1697},
+  {e:"Tratado de Aranjuez",y:1777},
+  {e:"Tratado de Basilea",y:1795},
+  {e:"Independencia Efímera de Núñez de Cáceres",y:1821},
+  {e:"Fundación de La Trinitaria",y:1838},
+  {e:"Proclamación de la Independencia Nacional",y:1844},
+  {e:"Grito de Capotillo",y:1863},
+  {e:"Inicio de la primera ocupación estadounidense",y:1916},
+  {e:"Muerte de Trujillo",y:1961},
+  {e:"Revolución de Abril",y:1965},
+  {e:"Crisis bancaria",y:2003}
+];
+let round=[], checked=false;
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+function newRound(){
+  do{ round = shuffle(POOL.slice()).slice(0,6); } while(round.every((x,i,a)=>!i||a[i-1].y<x.y));
+  checked=false; document.getElementById("result").textContent=""; drawGame();
+}
+function drawGame(){
+  const sorted = round.slice().sort((a,b)=>a.y-b.y);
+  document.getElementById("gameList").innerHTML = round.map((x,i)=>`<li class="${checked?(sorted[i]===x?"ok":"bad"):""}">
+    <span class="pos">${i+1}</span><span class="ev">${esc(x.e)}</span>${checked?`<span class="yr">${x.y}</span>`:""}
+    <button class="mv" type="button" data-i="${i}" data-d="-1" aria-label="Subir ${esc(x.e)}" ${i===0?"disabled":""}>↑</button>
+    <button class="mv" type="button" data-i="${i}" data-d="1" aria-label="Bajar ${esc(x.e)}" ${i===round.length-1?"disabled":""}>↓</button></li>`).join("");
+}
+document.getElementById("gameList").addEventListener("click",ev=>{
+  const b=ev.target.closest(".mv"); if(!b) return;
+  const i=+b.dataset.i, j=i+(+b.dataset.d);
+  [round[i],round[j]]=[round[j],round[i]]; checked=false; document.getElementById("result").textContent=""; drawGame();
+});
+document.getElementById("check").addEventListener("click",()=>{
+  checked=true; drawGame();
+  const sorted=round.slice().sort((a,b)=>a.y-b.y);
+  const ok=round.filter((x,i)=>sorted[i]===x).length;
+  document.getElementById("result").textContent = ok===6 ? "¡Perfecto! Los seis están en orden." : `${ok} de 6 en su lugar. Revisa los marcados en rojo.`;
+});
+document.getElementById("shuffle").addEventListener("click",newRound);
+newRound();
+
+/* ---------- Simulador 1: La isla en el tiempo ---------- */
+(function(){
+  const X=lon=>((lon+74.6)*104).toFixed(1), Y=lat=>((20.05-lat)*112).toFixed(1);
+  const pt=([a,b])=>X(a)+","+Y(b);
+  const N=[-71.75,19.72], S=[-71.75,18.03];
+  const eastCoast=[[-71.65,19.88],[-71.2,19.9],[-70.7,19.8],[-70.3,19.72],[-69.95,19.68],[-69.75,19.45],[-69.6,19.33],[-69.15,19.3],[-69.3,19.17],[-69.6,19.12],[-69.2,19.02],[-69.0,19.05],[-68.7,18.92],[-68.45,18.75],[-68.33,18.6],[-68.45,18.35],[-68.95,18.4],[-69.3,18.43],[-69.9,18.45],[-70.2,18.25],[-70.55,18.22],[-70.75,18.3],[-70.95,18.25],[-71.1,18.1],[-71.3,17.85],[-71.42,17.6],[-71.65,17.8]];
+  const westCoast=[[-72.1,18.15],[-72.55,18.22],[-73.0,18.18],[-73.75,18.19],[-74.1,18.3],[-74.48,18.4],[-74.4,18.6],[-74.1,18.65],[-73.6,18.5],[-73.1,18.45],[-72.65,18.5],[-72.35,18.55],[-72.5,18.8],[-72.8,19.1],[-72.7,19.45],[-73.0,19.6],[-73.4,19.8],[-73.0,19.92],[-72.5,19.9],[-72.2,19.76],[-71.85,19.73]];
+  const border=[N,[-71.7,19.5],[-71.65,19.25],[-71.75,19.0],[-71.65,18.85],[-71.9,18.6],[-71.95,18.4],S];
+  const east=[N,...eastCoast,S,...border.slice().reverse().slice(1,-1)].map(pt).join(" ");
+  const west=[S,...westCoast,N,...border.slice(1,-1)].map(pt).join(" ");
+  const cities=[
+    {n:"Santo Domingo",c:[-69.9,18.47],f:1,dx:-40,dy:20},{n:"Santiago",c:[-70.7,19.45],f:1,dx:8,dy:4},
+    {n:"Puerto Plata",c:[-70.69,19.79],f:1,dx:8,dy:-6},{n:"Cabo Francés / Cabo Haitiano",c:[-72.2,19.76],f:3,dx:-60,dy:-10},
+    {n:"Puerto Príncipe",c:[-72.33,18.54],f:4,dx:-30,dy:20}];
+  const ST=[
+    {y:"Antes de 1492",t:"Los primeros habitantes",w:"ind",e:"ind",lw:"Pueblos indígenas",p:"La isla estaba habitada por pueblos de tradición arahuaca, especialmente los taínos, junto con otras comunidades, organizados en cacicazgos."},
+    {y:"1492–1605",t:"La colonia española",w:"esp",e:"esp",lw:"España",p:"Tras la llegada de Colón en 1492, España colonizó toda la isla. Fundó La Isabela (1494) y Santo Domingo, que se convirtió en el centro administrativo de la colonia."},
+    {y:"1605–1606",t:"Las Devastaciones de Osorio",w:"esp",e:"esp",lw:"España",hw:"g",p:"España despobló comunidades del norte y el oeste para combatir el contrabando. El control efectivo de esas zonas se debilitó, lo que más tarde facilitó la llegada de colonos franceses."},
+    {y:"1697",t:"Tratado de Ryswick",w:"esp",e:"esp",lw:"Asentamientos franceses",le:"España",hw:"v",p:"Francia y España firman la paz en Europa. El tratado no menciona la isla ni traza una frontera, pero los asentamientos franceses del oeste continúan consolidándose de hecho."},
+    {y:"1777",t:"Tratado de Aranjuez",w:"fra",e:"esp",lw:"Francia (Saint-Domingue)",le:"España (Santo Domingo)",b:1,p:"España y Francia delimitan formalmente sus colonias. Por primera vez, un tratado fija una frontera entre la parte francesa y la española."},
+    {y:"1795",t:"Tratado de Basilea",w:"fra",e:"fra",lw:"Francia",p:"España cede a Francia su parte de la isla. La ocupación efectiva de la parte oriental se produjo años después, en medio de la revolución en la colonia francesa."},
+    {y:"1804",t:"Independencia de Haití",w:"hai",e:"fra",lw:"Haití",le:"Francia",b:1,p:"Tras la Revolución haitiana, Haití proclama su independencia en el oeste. Las tropas francesas permanecen en la parte oriental."},
+    {y:"1809",t:"La Reconquista",w:"hai",e:"esp",lw:"Haití",le:"España",b:1,p:"La Guerra de la Reconquista expulsa a las autoridades francesas y la parte oriental vuelve al dominio español."},
+    {y:"1821",t:"La Independencia Efímera",w:"hai",e:"he",lw:"Haití",le:"Haití Español",b:1,p:"José Núñez de Cáceres proclama el Estado Independiente del Haití Español en diciembre de 1821. Dura apenas unas semanas."},
+    {y:"1822–1844",t:"La isla unificada bajo Haití",w:"hai",e:"hai",lw:"Haití",p:"En 1822, el presidente haitiano Jean-Pierre Boyer unifica la isla. Se abole la esclavitud en la parte oriental y surgen tensiones que conducen a la independencia."},
+    {y:"1844",t:"Nace la República Dominicana",w:"hai",e:"rd",lw:"Haití",le:"República Dominicana",b:1,p:"El 27 de febrero de 1844 se proclama la independencia. La nueva república defiende su soberanía en las batallas de Azua y Santiago."},
+    {y:"1861–1865",t:"La Anexión a España",w:"hai",e:"esp",lw:"Haití",le:"España",b:1,p:"Pedro Santana anexa el país a España en 1861. El Grito de Capotillo (1863) inicia la Guerra de la Restauración, que termina con la salida española en 1865."},
+    {y:"1865 – hoy",t:"La República restaurada",w:"hai",e:"rd",lw:"Haití",le:"República Dominicana",b:1,p:"Se restablece la soberanía dominicana. Desde entonces la isla está compartida por la República Dominicana y Haití."}
+  ];
+  const lw=[-73.1,19.05], le=[-70.25,18.85];
+  document.getElementById("islaMap").innerHTML=`<svg viewBox="0 0 680 290" xmlns="http://www.w3.org/2000/svg">
+    <defs><pattern id="hv" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" class="hatch-line"/></pattern>
+    <pattern id="hg" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" style="stroke:var(--muted);stroke-width:1.2"/></pattern></defs>
+    <rect width="680" height="290" class="svg-sea"/>
+    <text class="svg-txt m" x="300" y="16">Océano Atlántico</text><text class="svg-txt m" x="250" y="282">Mar Caribe</text>
+    <polygon id="zW" class="zone" points="${west}"/><polygon id="zE" class="zone" points="${east}"/>
+    <polygon id="hW" points="${west}" style="stroke:none" fill="none"/>
+    <polyline id="bRef" class="border-ref" points="${border.map(pt).join(" ")}"/>
+    <text id="tW" class="svg-txt b" text-anchor="middle" x="${X(lw[0])}" y="${Y(lw[1])}"></text>
+    <text id="tE" class="svg-txt b" text-anchor="middle" x="${X(le[0])}" y="${Y(le[1])}"></text>
+    ${cities.map((c,i)=>`<g id="cty${i}"><circle class="svg-dot" r="3" cx="${X(c.c[0])}" cy="${Y(c.c[1])}"/><text class="svg-txt m" x="${+X(c.c[0])+c.dx}" y="${+Y(c.c[1])+c.dy}">${c.n}</text></g>`).join("")}
+  </svg>`;
+  const range=document.getElementById("islaRange"); range.max=ST.length-1;
+  const stepsEl=document.getElementById("islaSteps");
+  stepsEl.innerHTML=ST.map((s,i)=>`<button type="button" data-i="${i}" aria-pressed="false">${s.y}</button>`).join("");
+  function show(i){
+    const s=ST[i]; range.value=i;
+    const zW=document.getElementById("zW"), zE=document.getElementById("zE"), hW=document.getElementById("hW");
+    zW.setAttribute("class","zone z-"+s.w); zE.setAttribute("class","zone z-"+s.e);
+    hW.setAttribute("fill", s.hw==="v"?"url(#hv)":s.hw==="g"?"url(#hg)":"none");
+    document.getElementById("bRef").style.display = s.b ? "" : "none";
+    const same = !s.le;
+    const tW=document.getElementById("tW"), tE=document.getElementById("tE");
+    if(same){ tW.textContent=""; tE.textContent=s.lw; tE.setAttribute("x",X(-71.6)); }
+    else { tW.textContent=s.lw; tE.textContent=s.le; tE.setAttribute("x",X(le[0])); }
+    cities.forEach((c,k)=>{document.getElementById("cty"+k).style.display = i>=c.f ? "" : "none";});
+    document.getElementById("islaYr").textContent=s.y;
+    document.getElementById("islaT").textContent=s.t;
+    document.getElementById("islaP").textContent=s.p;
+    stepsEl.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed", +b.dataset.i===i));
+  }
+  range.addEventListener("input",()=>show(+range.value));
+  stepsEl.addEventListener("click",e=>{const b=e.target.closest("button"); if(b) show(+b.dataset.i);});
+  show(0);
+})();
+
+/* ---------- Simulador 2: Santiago 1863 ---------- */
+(function(){
+  const S=[
+    {d:"31 de agosto",t:"Polanco marcha desde Quinigua",p:"El general Gaspar Polanco sale de Quinigua con unos 6,000 hombres rumbo a Santiago."},
+    {d:"1 de septiembre",t:"Llega José Antonio Salcedo",p:"El coronel Salcedo (Pepillo) llega a Santiago y se suma al cerco de la ciudad."},
+    {d:"Primeros días de septiembre",t:"Los españoles se atrincheran",p:"Tras el combate de Gurabito, la guarnición española se refugia en la Fortaleza San Luis, el Castillo y la Cárcel Vieja."},
+    {d:"6 de septiembre",t:"Batalla e incendio",p:"Los restauradores atacan la fortaleza. José María Checo comanda el cantón de La Otra Banda. Por orden de Polanco se incendia la ciudad, y el viento del este propaga el fuego."},
+    {d:"12 de septiembre",t:"Victorias en los alrededores",p:"Los restauradores vencen en Jácuba, La Otra Banda y Marilópez, y cortan el auxilio que llegaba desde Puerto Plata."},
+    {d:"13 de septiembre",t:"Retirada española",p:"A las tres de la tarde, las tropas españolas abandonan Santiago rumbo a Puerto Plata, hostigadas por las guerrillas."},
+    {d:"14 de septiembre",t:"Acta de Independencia",p:"En Santiago se firma el Acta de Independencia y se instala el Gobierno restaurador, presidido por José Antonio Salcedo."}
+  ];
+  let cur=0;
+  const st=document.getElementById("stgSteps");
+  st.innerHTML=S.map((s,i)=>`<button type="button" data-i="${i}" aria-pressed="false">${s.d}</button>`).join("");
+  function show(i){
+    cur=i; const s=S[i];
+    document.querySelectorAll("#stgMap [data-on]").forEach(el=>{
+      const on=el.dataset.on.split(",").map(Number).includes(i);
+      el.classList.toggle("on",on);
+    });
+    document.getElementById("stgYr").textContent=s.d;
+    document.getElementById("stgT").textContent=s.t;
+    document.getElementById("stgP").textContent=s.p;
+    st.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed", +b.dataset.i===i));
+    document.getElementById("stgPrev").disabled = i===0;
+    document.getElementById("stgNext").disabled = i===S.length-1;
+  }
+  st.addEventListener("click",e=>{const b=e.target.closest("button"); if(b) show(+b.dataset.i);});
+  document.getElementById("stgPrev").addEventListener("click",()=>cur>0&&show(cur-1));
+  document.getElementById("stgNext").addEventListener("click",()=>cur<S.length-1&&show(cur+1));
+  show(0);
+})();
+
+/* ---------- Videoteca ---------- */
+(function(){
+  const V=[
+    {id:"kw24t_vg6_4",ep:"Episodio 47",t:"La Primera Independencia Dominicana, 1821: la Independencia Efímera de José Núñez de Cáceres",d:"El intento de 1821 de separar la parte oriental de España y por qué no logró consolidarse.",q:["¿Qué nombre recibió el Estado proclamado en 1821?","¿Por qué crees que no logró sostenerse?","¿Qué diferencia hay entre 1821 y 1844?"]},
+    {id:"KMmefj7Kq1I",ep:"Episodio 31",t:"La Guerra Restauradora, parte 3: la batalla de Guayubín",d:"Los combates tras el Grito de Capotillo, la lucha por Santiago y la formación del gobierno restaurador.",q:["¿Qué ocurrió después del Grito de Capotillo?","¿Por qué era importante tomar Santiago?","¿Qué decidió el gobierno restaurador al instalarse?"]},
+    {id:"hFTwz0SyL7M",ep:"Episodio 32",t:"La Guerra Restauradora, parte 4: Arroyo Bermejo",d:"Santana frente a Luperón, el desenlace de la guerra y la salida de las tropas españolas en 1865.",q:["¿Quiénes se enfrentaron en Arroyo Bermejo?","¿Qué papel tuvo Pedro Santana en esta etapa?","¿Cómo terminó la presencia española?"]}
+  ];
+  const embed = !!window.EMBED_VIDEOS;
+  document.getElementById("vgrid").innerHTML=V.map(v=>`<article class="vcard">
+    ${embed?`<iframe class="vframe" src="https://www.youtube-nocookie.com/embed/${v.id}" title="${esc(v.t)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
+      :`<a class="vthumb" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener" aria-label="Ver en YouTube: ${esc(v.t)}"><span class="ep">${v.ep} · Fundación Corripio</span><span class="play" aria-hidden="true"></span><span class="src">Ver en YouTube</span></a>`}
+    <div class="vbody"><h4>${esc(v.t)}</h4><p>${esc(v.d)}</p><div class="lbl">Guía de observación</div><ol>${v.q.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div>
+  </article>`).join("");
+})();
+
+/* ---------- Cuestionario ---------- */
+(function(){
+  const Q=[
+    {q:"¿Qué tratado delimitó por primera vez, de forma directa, las posesiones española y francesa en la isla?",o:["Ryswick (1697)","Aranjuez (1777)","Basilea (1795)","Utrecht (1713)"],a:1,e:"El Tratado de Aranjuez (1777) estableció disposiciones específicas para delimitar ambas colonias."},
+    {q:"¿Cuál afirmación sobre el Tratado de Ryswick es correcta?",o:["Dividió la isla en dos partes iguales.","Cedió toda la isla a Francia.","No menciona expresamente la isla ni traza una frontera.","Creó la República Dominicana."],a:2,e:"Ryswick puso fin a una guerra europea; no nombra la isla ni fija una frontera, como explica el historiador Blancpain."},
+    {q:"¿Qué tratado cedió a Francia la parte española de la isla?",o:["Aranjuez","Basilea","Ryswick","Tordesillas"],a:1,e:"Por el Tratado de Basilea (1795), España cedió su parte de la isla a Francia."},
+    {q:"¿Quién proclamó la Independencia Efímera en 1821?",o:["Juan Pablo Duarte","José Núñez de Cáceres","Juan Sánchez Ramírez","Pedro Santana"],a:1,e:"José Núñez de Cáceres proclamó el Estado Independiente del Haití Español en diciembre de 1821."},
+    {q:"¿Dónde se encontraba Juan Pablo Duarte la noche del 27 de febrero de 1844?",o:["En la Puerta del Conde","En Santiago","En el exilio","En San Cristóbal"],a:2,e:"Duarte estaba en el exilio y regresó al país a mediados de marzo de 1844."},
+    {q:"¿Quién comandó el cantón de La Otra Banda en la batalla de Santiago del 6 de septiembre de 1863?",o:["Gregorio Luperón","José María Checo","Benito Monción","Santiago Rodríguez"],a:1,e:"El general José María Checo tuvo a su cargo el cantón de La Otra Banda."},
+    {q:"¿Con qué propósito ordenó Gaspar Polanco incendiar Santiago?",o:["Castigar a la población","Que la ciudad dejara de servir de refugio y abastecimiento a los españoles","Celebrar la victoria","Destruir la Fortaleza San Luis"],a:1,e:"Sin casas ni abastecimiento, la plaza perdió su valor para las tropas españolas, que se retiraron a Puerto Plata."},
+    {q:"¿Qué documento se firmó en Santiago el 14 de septiembre de 1863?",o:["La primera Constitución","El Acta de Independencia de la Restauración","El Tratado de Aranjuez","El Manifiesto del 16 de enero"],a:1,e:"Al día siguiente de la retirada española se firmó el Acta de Independencia y se instaló el Gobierno restaurador."},
+    {q:"Entre 1922 y 1924, durante la ocupación estadounidense, ¿quién encabezó un gobierno provisional dominicano?",o:["Horacio Vásquez","Juan Bautista Vicini Burgos","Francisco Henríquez y Carvajal","Rafael Estrella Ureña"],a:1,e:"Juan Bautista Vicini Burgos fue presidente provisional desde octubre de 1922 y preparó la transición."},
+    {q:"¿Por qué el 25 de noviembre es un día internacional?",o:["Por la muerte de Trujillo","Por la memoria de las hermanas Mirabal","Por la Revolución de Abril","Por la independencia de Haití"],a:1,e:"En memoria de las hermanas Mirabal, la ONU declaró en 1999 el Día Internacional de la Eliminación de la Violencia contra la Mujer."}
+  ];
+  const form=document.getElementById("quiz");
+  form.innerHTML=Q.map((x,i)=>`<div class="q"><fieldset><legend><span class="qn">${i+1}/${Q.length}</span>${esc(x.q)}</legend>
+    <div class="opts">${x.o.map((o,j)=>`<label for="q${i}o${j}"><input type="radio" name="q${i}" id="q${i}o${j}" value="${j}"><span>${esc(o)}</span></label>`).join("")}</div>
+    <p class="fb" id="fb${i}" hidden></p></fieldset></div>`).join("");
+  form.addEventListener("submit",e=>e.preventDefault());
+  function update(){
+    let ans=0, ok=0;
+    Q.forEach((x,i)=>{
+      const sel=form.querySelector(`input[name="q${i}"]:checked`);
+      const fb=document.getElementById("fb"+i);
+      form.querySelectorAll(`input[name="q${i}"]`).forEach(inp=>{
+        inp.parentElement.classList.remove("ok","bad");
+        if(sel){ inp.disabled=true; if(+inp.value===x.a) inp.parentElement.classList.add("ok"); else if(inp===sel) inp.parentElement.classList.add("bad"); }
+        else inp.disabled=false;
+      });
+      if(sel){ ans++; const good=+sel.value===x.a; if(good) ok++;
+        fb.hidden=false; fb.className="fb"+(good?"":" no"); fb.innerHTML=`<b>${good?"Correcto.":"Incorrecto."}</b> ${esc(x.e)}`; }
+      else fb.hidden=true;
+    });
+    document.getElementById("scoreNum").textContent=`${ok} / ${Q.length}`;
+    document.getElementById("scoreMsg").textContent = ans<Q.length ? `Has respondido ${ans} de ${Q.length} preguntas.`
+      : ok>=9 ? "Excelente dominio del tema." : ok>=7 ? "Buen dominio. Repasa las preguntas marcadas en rojo." : ok>=5 ? "En proceso. Vuelve a la línea de tiempo y a los simuladores." : "Inicial. Recorre de nuevo la ruta de aprendizaje desde el paso 1.";
+  }
+  form.addEventListener("change",update);
+  document.getElementById("quizReset").addEventListener("click",()=>{form.reset(); form.querySelectorAll("input").forEach(i=>i.disabled=false); update();});
+  update();
+})();
+
+/* ---------- Autoevaluación ---------- */
+(function(){
+  const boxes=[...document.querySelectorAll(".self input")];
+  const msg=document.getElementById("selfMsg");
+  const upd=()=>{const n=boxes.filter(b=>b.checked).length; msg.textContent=`Has marcado ${n} de ${boxes.length} logros.`+(n===boxes.length?" ¡Listo para presentar tu actividad!":"");};
+  boxes.forEach(b=>b.addEventListener("change",upd)); upd();
+})();
+</script>
